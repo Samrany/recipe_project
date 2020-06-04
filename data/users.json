@@ -1,0 +1,18 @@
+[
+	{
+		"email":"test@email.com",
+		"password":"none",
+		"first_name":"first",
+		"last_name":"last"
+
+	},
+	{
+		"email":"test2@email.com",
+		"password":"none2",
+		"first_name":"first2",
+		"last_name":"last2"
+
+	},
+
+]
+
