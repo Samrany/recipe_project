@@ -1,0 +1,6 @@
+*env*
+.gitignore
+template.json
+*secrets*
+*template.json*
+*pychache*

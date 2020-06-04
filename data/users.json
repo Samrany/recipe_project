@@ -13,6 +13,20 @@
 		"last_name":"last2"
 
 	},
+	{
+		"email":"test3@email.com",
+		"password":"none3",
+		"first_name":"first3",
+		"last_name":"last3"
+
+	},
+	{
+		"email":"test4@email.com",
+		"password":"none4",
+		"first_name":"first4",
+		"last_name":"last4"
+
+	},
 
 ]
 

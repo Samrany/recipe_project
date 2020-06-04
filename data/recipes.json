@@ -1,29 +1,63 @@
 
 [
 	{
-		"recipe_name": "5-ingredient green chile stew",
+		"recipe_name": "",
 		"source_name": "The Defined Dish",
-		"website": "https://thedefineddish.com/5-ingredient-green-chile-stew/",
+		"website": "https://t5-ingredient green chile stewhedefineddish.com/5-ingredient-green-chile-stew/",
 		"directions": "Cut pork into 1/2-inch cubes and season with salt and pepper.Turn the Instant Pot on to the 'saute' function and add the olive oil. When the oil starts to shimmer and the pot is hot, add the pork and brown on all sides, about 2 minutes per side. (You might need to do this in two batches to prevent overcrowding.) Set browned pork on aside on a clean plate.With the Instant Pot still on the saute function, add your onions, garlic and cumin. Cook until onions begin to soften, about 4 minutes. When the onions are softened, hit the 'cancel/keep warm' button on the Instant Pot. Add the browned pork back into the pot along with the cumin, jar of green chiles, potatoes, chicken broth and bay leaf. Stir to combine. Secure the lid on your Instant Pot and make sure that the valve on the top is facing towards 'sealed'. Press the 'Meat/Stew' button and set the time to 35 minutes. Walk away from the InstantPot and let it do it's thing. When the cook time is complete, carefully release the pressure in the InstantPot by turning the valve to 'vent'. Once all the pressure is released and there is no more steam coming out of the InstantPot, carefully open the lid. You can either serve as is, or garnish as desired! Cilantro leaves, shredded cabbage and diced avocado all goes well on top of the soup-- but only if you have it around 😉 Enjoy!",
 		"image":"https://thedefineddish.com/wp-content/uploads/2019/12/2019-12-05-02.55.00.jpg",
 		"servings":"5",
-		"ingredients": [{"ingredient_name":"olive oil", "amount":2, "metric": "oz"}, {"pork"}]
-
+		"ingredients": [{"ingredient_name":"olive oil", "amount":2, "metric": "tbsp"} {
+						"ingredient_name":"pork roast", "amount": 1.5, "metric": "lb"} { 
+						"ingredient_name":"kosher salt", "amount": 1, "metric": "tsp"}, { 
+						"ingredient_name":"black pepper", "amount": 0.5, "metric": "tsp"}, { 
+						"ingredient_name":"yellow onion", "amount": 1 }, { 
+					    "ingredient_name":"garlic cloves", "amount": 2, "preparation": "minced"}, { 
+					    "ingredient_name":"ground cumin", "amount": 0.25 , "metric": "tsp"}, {
+					    "ingredient_name":"hatch green chiles", "amount": 16, "metric": "oz"}, {  
+					    "ingredient_name":"Yukon gold potatoes", "amount": 1, "metric": "lb", "preparation": "1/2-inch cubes"}, {  
+					    "ingredient_name":"chicken broth", "amount": 2, "metric": "cups"}, {  	
+					    "ingredient_name":"bay leaf", "amount": 1 }  				  
+		
+					]
 	},
 
+	{
+
+		"recipe_name": "RAW CHOCOLATE MILKSHAKE MIRACLE",
+		"source_name": "My New Roots",
+		"website": "https://www.mynewroots.org/site/2010/06/raw-chocolate-milkshake-miracle-2/",
+		"directions": " 1. Blend all the ingredients together; add water to thin if desired. It’s a thick one, folks!",
+		"image":"https://www.mynewroots.org/images/milkshake.jpg",
+		"servings":"1",
+		"ingredients": [{"ingredient_name":"hemp seeds", "amount": 0.25 , "metric": "cup"} {
+						"ingredient_name":" raw cacao pwder", "amount": 2, "metric": "tbsp"} {
+						"ingredient_name":"avocado", "amount": 1} {
+						"ingredient_name":"banana", "amount": 1, "preparation": "large, frozen"} {
+						"ingredient_name":"honey", "amount": 2, "metric": " tbsp"} {
+						"ingredient_name":"sea salt", "amount": 1 , "metric": "dash"} {
+						"ingredient_name":"water", "amount": 0.75 , "metric": "cup"} {
+						"ingredient_name":"ice cubes", "amount": 4} 	  
+		
+					]
+
+	},
+	{
+		"recipe_name": "Shira's chocolate pork",
+		"source_name": " Shira's head",
+		"website": " www.shira.com ",
+		"directions": "Take the pork, smother it with butter, raw cacao, and garlic, roast in the oven at 425 degrees for 30 min.",
+		"image":" ",
+		"servings":"4 ",
+		"ingredients": [{"ingredient_name":" raw cacao powder", "amount": 0.5, "metric": "cup"} {
+						"ingredient_name":"pork roast", "amount": 10, "metric": "oz"} { 
+					    "ingredient_name":"garlic cloves", "amount": 4, "preparation": "minced"}{
+					    "ingredient_name":"butter", "amount": 0.25, "metric": "stick"
+						}
+					   ]
 
 
-]
-2 tbsp olive oil
-1 1/2 lb pork roast (can sub pork shoulder, butt or tenderloin here too)
-1 tsp kosher salt
-1/2 tsp freshly cracked back pepper
-1 medium yellow onion, diced small
-2 cloves garlic, minced
-1/4 tsp ground cumin (optional)
-1 [16-ounce] jar of hatch green chiles (I use Medium spicy)
-1 lb Yukon gold potatoes, cut into 1/2-inch cubes
-2 cups low-sodium chicken broth
-1 bay leaf (optional)
+
+
 
 
