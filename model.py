@@ -23,9 +23,9 @@ class User(db.Model):
         return f'<User user_id={self.user_id} email={self.email}>'
 
 class Recipe(db.Model):
-	"""A recipe."""
+    """A recipe."""
 
-	__tablename__ = 'recipes'
+    __tablename__ = 'recipes'
 
     recipe_id = db.Column(db.Integer,
                         autoincrement=True,
@@ -44,9 +44,9 @@ class Recipe(db.Model):
         return f'<recipe id={self.recipe_id} name={self.recipe_name}>'
 
 class Fave_recipes(db.Model):
-	"""Users favorite recipes."""
+    """Users favorite recipes."""
 
-	__tablename__ = 'fave_recipes'
+    __tablename__ = 'fave_recipes'
 
     fave_id = db.Column(db.Integer,
                         autoincrement=True,
@@ -63,19 +63,19 @@ class Fave_recipes(db.Model):
 
 
 class Ingredient(db.Model):
-	"""Ingredients and their attributes"""
+    """Ingredients and their attributes"""
 
-	__tablename__ = 'ingredients'
+    __tablename__ = 'ingredients'
 
     ingredient_id = db.Column(db.Integer,
                         autoincrement=True,
-                        primary_key=True)	
-    ingredient_name = db.Column(db.Boolean, db.default = True)
-    dairy_free = db.Column(db.Boolean, db.default = True)
-    gluten_free = db.Column(db.Boolean, db.default = True)
-    vegetarian = db.Column(db.Boolean, db.default = True)
-    vegan = db.Column(db.Boolean, db.default = True)
-    paleo = db.Column(db.Boolean, db.default = True)
+                        primary_key=True)   
+    ingredient_name = db.Column(db.Boolean, default = True)
+    dairy_free = db.Column(db.Boolean, default = True)
+    gluten_free = db.Column(db.Boolean, default = True)
+    vegetarian = db.Column(db.Boolean, default = True)
+    vegan = db.Column(db.Boolean, default = True)
+    paleo = db.Column(db.Boolean, default = True)
 
     recipe_ingredients = db.relationship("Recipe_ingredients")
     user_no_goes = db.relationship("User_no_goes")
@@ -84,9 +84,9 @@ class Ingredient(db.Model):
         return f'<id={self.ingredient_id} ingredient={self.ingredient_name}>'
 
 class Recipe_ingredients(db.Model):
-	"""Ingredients with measurements as listed in recipes. """
+    """Ingredients with measurements as listed in recipes. """
 
-	__tablename__ = 'recipe_ingredients'
+    __tablename__ = 'recipe_ingredients'
 
     key = db.Column(db.Integer,
                         autoincrement=True,
@@ -102,9 +102,9 @@ class Recipe_ingredients(db.Model):
 
 
 class User_no_goes(db.Model):
-	"""User ingredient preferences to exclude. """
+    """User ingredient preferences to exclude. """
 
-	__tablename__ = 'user_no_goes'
+    __tablename__ = 'user_no_goes'
 
     user_pref_id = db.Column(db.Integer,
                         autoincrement=True,
