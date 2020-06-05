@@ -70,7 +70,7 @@ class Ingredient(db.Model):
     ingredient_id = db.Column(db.Integer,
                         autoincrement=True,
                         primary_key=True)   
-    ingredient_name = db.Column(db.Boolean, default = True)
+    ingredient_name = db.Column(db.String)
     dairy_free = db.Column(db.Boolean, default = True)
     gluten_free = db.Column(db.Boolean, default = True)
     vegetarian = db.Column(db.Boolean, default = True)
@@ -117,7 +117,7 @@ class User_no_goes(db.Model):
     ingredient = db.relationship("Ingredient") 
 
 
-def connect_to_db(flask_app, db_uri='postgresql:///ratings', echo=True):
+def connect_to_db(flask_app, db_uri='postgresql:///recipes', echo=True):
     flask_app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
     # flask_app.config['SQLALCHEMY_ECHO'] = echo
     flask_app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
