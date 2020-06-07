@@ -8,3 +8,4 @@
   "ingredient_name":"honey"},{"ingredient_name":"sea salt"} ,{"ingredient_name":"water"},{"ingredient_name":"ice cubes"},{
   "ingredient_name":"butter", "dairy_free":"False"},{"ingredient_name":""}]
 
+// recipe = create_new_recipe('rec', 'chef d', 'www.heyo.com', 'soak the almonds and put in food processor with salt', 'img2', 4, [{"ingredient_name": "almonds", "amount": 2, "metric": "cups"},{"ingredient_name": "salt", "amount": "1", "metric": "dash"}])

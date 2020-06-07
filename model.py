@@ -59,7 +59,7 @@ class Fave_recipes(db.Model):
 
 
     def __repr__(self):
-        return f'<recipe={self.recipe_id.recipe_name} user={self.user.email}>'
+        return f'<recipe={self.recipe_id} user={self.user.email}>'
 
 
 class Ingredient(db.Model):
@@ -99,6 +99,9 @@ class Recipe_ingredients(db.Model):
 
     ingredient = db.relationship("Ingredient")
     recipe = db.relationship("Recipe")
+
+    def __repr__(self):
+        return f'<recipe_id={self.recipe_id} ingredient={self.ingredient} metric={self.metric}>'
 
 
 class User_no_goes(db.Model):
