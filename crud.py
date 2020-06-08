@@ -54,7 +54,7 @@ def get_ingredient_name(ingredient_id):
     
     return current_name
 
-def return_all_ingredients_by_name():
+def all_ingredients_by_name():
     """Return all ingredients by name in a list"""
 
     existing_ingredients = []
@@ -139,7 +139,7 @@ def create_new_recipe(recipe_name, source_name, website, directions, image, serv
     db.session.commit()
 
     # get a list of existing ingredients in db and commit ingredients from recipe to db if not already in.
-    existing_ingredients = return_all_ingredients_by_name() # REVISIT
+    existing_ingredients = all_ingredients_by_name() # REVISIT
     current_ingredient_objects = all_ingredients()
     current_recipe_id = current_recipe.recipe_id
 

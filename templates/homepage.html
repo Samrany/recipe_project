@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock %}
+{% block head %} 
+	
+<!-- If Statement. If user logged in say hello and show link to user faves, otherwise show login link
+-->
+	<div><a href = "/login"> Login </a></div> 
+
+{% endblock %}
+{% block body %}
+<!-- for each recipe in db create a recipe card  
+Each recipe card link to page with all recipe details
+User can favorite recipe cards
+-->
+	{% for recipe in recipes %}
+	<div> <a href="/{{recipe.recipe_id}}"> {{recipe.recipe_name}} </a>
+		  Source: {{recipe.source_name}}
+		  <img src = "{recipe.image}}" >  {{recipe.image}}
+		  Ingredients: 
+		   {% for ingredient in ingredients %}
+		  {{ingredient}} /   
+		  {% endfor %}
+		  
+		  <p></p>
+
+
+	</div>
+	{% endfor %}
+
+
+{% endblock %}
