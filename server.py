@@ -26,7 +26,7 @@ def login():
 
 @app.route('/<recipe_id>')
 def recipe_details(recipe_id):
-	recipe =crud.recipe_by_id(recipe_id)
+	recipe =crud.get_recipe_by_id(recipe_id)
 	return render_template("recipe_details.html", recipe = recipe)
 
 if __name__ == '__main__':

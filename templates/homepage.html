@@ -16,7 +16,7 @@ User can favorite recipe cards
 	{% for recipe in recipes %}
 	<div> <a href="/{{recipe.recipe_id}}"> {{recipe.recipe_name}} </a>
 		  Source: {{recipe.source_name}}
-		  <img src = "{recipe.image}}" >  {{recipe.image}}
+		  <img src = "{{recipe.image}}" >  
 		  Ingredients: 
 		   {% for ingredient in ingredients %}
 		  {{ingredient}} /   
