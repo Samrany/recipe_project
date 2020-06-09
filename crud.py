@@ -177,6 +177,10 @@ def get_user_by_id(user_id):
     user = User.query.get(user_id)
     return user
 
+def get_user_by_email(email):
+    user = User.query.filter_by(email = email).first()
+    return user
+
 def get_recipe_by_id(recipe_id):
     """Returns a recipe object given a recipe_id"""
     recipe = Recipe.query.get(recipe_id)
