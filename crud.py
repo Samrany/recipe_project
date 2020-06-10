@@ -76,57 +76,6 @@ def add_needed_ingredient(recipe_id, ingredient_id, amount, metric = None, prepa
 
     return current_needed_ingredient
 
-# def  add_list_of_recipe_ingredients(recipe_id, ingredients):
-# #     """Takes a dictionary of ingredients, related recipe id, and instantiates objects to commit to the db"""
-# #     for ingredient in ingredients:
-# #     name = ingredient.get('ingredient_name')
-# #     if name not in existing_ingredients:
-# #         add_new_ingredient(name)
-# #       ##### Doesn't account for any attributes of the ingredient nor ensure case consistency
-    
-#     for ingredient in ingredients:
-#         name = ingredient.get('ingredient_name')
-
-#         current_ingredient = Ingredient.query.filter_by(ingredient_name = ingredient_name).one()
-#         if name not in existing_ingredients:
-#             add_new_ingredient(name)
-#           ##### Doesn't account for any attributes of the ingredient nor ensure case consistency
-        
-#         ingredient_id = get_ingredient_id(name)
-#         print(ingredient_id)
-#         amount = ingredient["amount"]
-#         print(amount)
-#         metric = ingredient["metric"]
-#         print(metric)
-#         preparation = ingredient["preparation"]
-#         print(preparation)
-
-#         add_needed_ingredient(recipe_id, ingredient_id, amount, metric, preparation)
-          
-
-
-    # current_ingredient_in_recipe = 4
-
-    # for ingredient in ingredients:
-    #     name = ingredient.get('ingredient_name')
-    #     print(name)
-    #     ingredient_id = get_ingredient_id(name)
-    #     print(ingredient_id)
-    #     amount = ingredient.get('amount')
-    #     print(amount)
-    #     metric = ingredient.get('metric')
-    #     print(metric)
-    #     prepartion = ingredient.get('preparation')
-    #     print(preparation)
-
-    #     # current_object = Recipe_ingredients(recipe_id = recipe_id, ingredient_id = ingredient_id,
-    #     #                                     amount = amount, metric = metric, preparation = preparation)
-    #     # db.session.add(current_object)
-    #     # db.session.commit()
-
-    # return current_ingredient_in_recipe
-    # # what am I actually returning here? ingredient objects that relate to this recipe?
-
 
 def create_new_recipe(recipe_name, source_name, website, directions, image, servings, ingredients): 
     """Create and return new recipes, add ingredients to database if not there, and add ingredients 

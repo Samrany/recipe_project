@@ -37,11 +37,13 @@ def create_login():
 @app.route('/users', methods = ['POST'])
 def register_user():
 	"""Create a new user."""
-	email = request.form.get("email")
+	email = request.form["email"] #work with a dict
+	Assert e-mail is not None # works with other objects/formats as well
 	password = request.form.get("password")
 	first_name = request.form.get("f_name")
 	last_name = request.form.get("l_name")
 	user = crud.get_user_by_email(email)
+	print(user)
 
 	if user:
 		flash('User already has an account. Login instead')
