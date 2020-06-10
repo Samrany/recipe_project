@@ -5,9 +5,15 @@
 	
 <!-- If Statement. If user logged in say hello and show link to user faves, otherwise show login link
 -->
-	<div><a href = "/login"> Login </a></div>
-	<div> or </div>
-	<div><a href = "/create_login"> Create Account </a></div>
+	{% if session['logged_in'] %}
+		<div> Hi, Name </div>
+		<div><a href = "/faves/<user_id>"> My Favorites </div>
+		<div> Logout </div>		
+	{% else %}
+		<div><a href = "/login"> Login </a></div>
+		<div> or </div>
+		<div><a href = "/create_login"> Create Account </a></div>
+	{% endif %}
 
 {% endblock %}
 {% block body %}
