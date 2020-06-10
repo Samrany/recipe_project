@@ -78,8 +78,8 @@ def add_needed_ingredient(recipe_id, ingredient_id, amount, metric = None, prepa
 
 
 def create_new_recipe(recipe_name, source_name, website, directions, image, servings, ingredients): 
-    """Create and return new recipes, add ingredients to database if not there, and add ingredients 
-    in recipes where ingredients is a list of dictionary objects."""
+    """Create and return new recipes, add ingredients to database if not there, and add associated 
+    ingredients in recipes where ingredients is a list of dictionary objects."""
 
     # Add recipe to db
     current_recipe = Recipe(recipe_name = recipe_name, source_name = source_name,
@@ -88,7 +88,7 @@ def create_new_recipe(recipe_name, source_name, website, directions, image, serv
     db.session.commit()
 
     # get a list of existing ingredients in db and commit ingredients from recipe to db if not already in.
-    existing_ingredients = all_ingredients_by_name() # REVISIT
+    existing_ingredients = all_ingredients_by_name() # REVISIT?
     current_ingredient_objects = all_ingredients()
     current_recipe_id = current_recipe.recipe_id
 
@@ -98,7 +98,7 @@ def create_new_recipe(recipe_name, source_name, website, directions, image, serv
             ingredient_id = add_new_ingredient(name).ingredient_id
 
         else:
-            ingredient_obj = Ingredient.query.filter_by(ingredient_name = name).first() # QUERYING EVERYTIME
+            ingredient_obj = Ingredient.query.filter_by(ingredient_name = name).first() # QUERYING EVERYTIME. REVISIT
             ingredient_id = ingredient_obj.ingredient_id 
           ##### Doesn't account for any attributes of the ingredient nor ensure case consistency
         amount = ingredient.get('amount', None)
@@ -136,6 +136,13 @@ def get_recipe_by_id(recipe_id):
     
     return recipe
 
+
+def get_user_faves(user_id):
+    """Get favorated recipes associated with a user_id"""
+    # user_faves = Fave_recipes.query.filter_by(user_id = user.user_id)
+    user_faves = Fave_recipes.query.filter_by(user_id = user_id)
+
+    return user_faves
 
 def fave_recipe(user, recipe):
     """Save a favorite recipe to the db"""

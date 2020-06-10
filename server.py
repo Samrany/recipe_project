@@ -37,8 +37,8 @@ def create_login():
 @app.route('/users', methods = ['POST'])
 def register_user():
 	"""Create a new user."""
-	email = request.form["email"] #work with a dict
-	Assert e-mail is not None # works with other objects/formats as well
+	email = request.form["e-mail"] #work with a dict
+	# Assert e-mail is not None # works with other objects/formats as well
 	password = request.form.get("password")
 	first_name = request.form.get("f_name")
 	last_name = request.form.get("l_name")
@@ -52,6 +52,17 @@ def register_user():
 		crud.create_user(email, password, first_name, last_name)
 		flash('Success!')
 		return redirect("/")
+
+
+@app.route('/faves/<user_id>')
+def show_favorites(user_id):
+	#ID?
+	favorites = crud.get_user_faves(user_id)
+	user = crud.get_user_by_id(user_id)
+	name = user.first_name.title()
+	return render_template("user_favorites.html", favorites = favorites, name = name)
+
+
 
 if __name__ == '__main__':
 	connect_to_db(app)

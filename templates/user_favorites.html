@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %} My Favorites {% endblock %}
+{% block head %}  {% endblock %}
+{% block body %}
+<h1> {{name}}'s Favorites </h1>
+
+
+<!-- for favorite in favorites:
+favorite.recipe (show recipe_card for each)
+ -->
+
+	{% for favorite in favorites %}
+	<div> <a href="/{{favorite.recipe.recipe_id}}"> {{favorite.recipe.recipe_name}} </a>
+		  Source: {{favorite.recipe.source_name}}
+		  <img src = "{{favorite.recipe.image}}" >  
+		  Ingredients: 
+		   {% for each in favorite.recipe.recipe_ingredients %}
+		  {{each.ingredient.ingredient_name}} /   
+		  {% endfor %}
+
+	</div>
+	{% endfor %}
+
+
+{% endblock %}
