@@ -37,12 +37,13 @@ def create_login():
 
 	return render_template("create_login.html")
 
+
 @app.route('/users', methods = ['POST'])
 def register_user():
 	"""Create a new user."""
 	email = request.form["e-mail"] #work with a dict
 	# Assert e-mail is not None # works with other objects/formats as well
-	password = request.form.get("password")
+	password = request.form.get("password") ################
 	first_name = request.form.get("f_name")
 	last_name = request.form.get("l_name")
 	user = crud.get_user_by_email(email)
@@ -57,13 +58,27 @@ def register_user():
 		session['logged_in'] = True
 		session['name'] = user.first_name.title()
 		session['user_id'] = user.user_id
-		print("session user_id is:")
-		print(session['user_id'])
 		# session['user_obj'] = user
 		return redirect("/")
 
 
-# @app.route("/api/tuition")
+@app.route('/log_in_form', methods = ['POST'])
+def check_login():
+	"""Log in User"""
+	email = request.form["e-mail"]
+	password = request.form["password"]
+	user = crud.get_user_by_email(email)
+	
+	if user and user.password == password: #THIS WHOLE SET IS A REPEAT. PUT IN A SEPARATE FUNCTION?
+		session['logged_in'] = True
+		session['name'] = user.first_name.title()
+		session['user_id'] = user.user_id
+		# session['user_obj'] = user
+		return redirect("/")
+	else:
+		return redirect("/login")		
+
+
 
 @app.route('/faves')
 def show_favorites():
