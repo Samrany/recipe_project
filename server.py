@@ -8,7 +8,7 @@ from jinja2 import StrictUndefined
 
 
 app = Flask(__name__)
-app.secret_key = "dev"
+app.secret_key = "Shira"
 app.jinja_env.undefined = StrictUndefined
 
 @app.route('/') 
@@ -19,7 +19,6 @@ def homepage():
     return render_template("homepage.html", recipes = recipes, ingredients = ingredients)
 
 
-
 @app.route('/<recipe_id>')
 def recipe_details(recipe_id):
 	recipe =crud.get_recipe_by_id(recipe_id)
@@ -28,10 +27,14 @@ def recipe_details(recipe_id):
 @app.route('/login') 
 def login():
     """Show the login page."""
+    # if login matches backend, return X otherwise return y
+
     return render_template("login.html")
 
 @app.route('/create_login')
 def create_login():
+
+
 	return render_template("create_login.html")
 
 @app.route('/users', methods = ['POST'])
@@ -43,23 +46,33 @@ def register_user():
 	first_name = request.form.get("f_name")
 	last_name = request.form.get("l_name")
 	user = crud.get_user_by_email(email)
-	print(user)
+
 
 	if user:
 		flash('User already has an account. Login instead')
 		return redirect("/login")
+
 	else:
-		crud.create_user(email, password, first_name, last_name)
-		flash('Success!')
+		user = crud.create_user(email, password, first_name, last_name)
+		session['logged_in'] = True
+		session['name'] = user.first_name.title()
+		session['user_id'] = user.user_id
+		print("session user_id is:")
+		print(session['user_id'])
+		# session['user_obj'] = user
 		return redirect("/")
 
 
-@app.route('/faves/<user_id>')
-def show_favorites(user_id):
+# @app.route("/api/tuition")
+
+@app.route('/faves')
+def show_favorites():
 	#ID?
+	user_id = session.get('user_id')
+	print(user_id)
 	favorites = crud.get_user_faves(user_id)
-	user = crud.get_user_by_id(user_id)
-	name = user.first_name.title()
+	user = crud.get_user_by_id(user_id) # SHOULDNT I BE ABLE TO ACCESS VIA SESSION?
+	name = user.first_name.title() #DELETE
 	return render_template("user_favorites.html", favorites = favorites, name = name)
 
 
