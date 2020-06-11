@@ -90,7 +90,13 @@ def show_favorites():
 	name = user.first_name.title() #DELETE
 	return render_template("user_favorites.html", favorites = favorites, name = name)
 
-
+@app.route('/log_out')
+def log_out():
+	print(session.keys)
+	session.clear()
+	print()
+	print(session.keys)
+	return redirect("/")
 
 if __name__ == '__main__':
 	connect_to_db(app)
