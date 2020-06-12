@@ -144,9 +144,9 @@ def get_user_faves(user_id):
 
     return user_faves
 
-def fave_recipe(user, recipe):
+def fave_recipe(user_id, recipe_id):
     """Save a favorite recipe to the db"""
-    fave_recipe = Fave_recipes(user_id = user.user_id, recipe_id = recipe.recipe_id)
+    fave_recipe = Fave_recipes(user_id = user_id, recipe_id = recipe_id)
 
     db.session.add(fave_recipe)
     db.session.commit()

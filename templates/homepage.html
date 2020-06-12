@@ -3,7 +3,7 @@
 {% block title %}{% endblock %}
 {% block head %} 
 	
-<!-- If Statement. If user logged in say hello and show link to user faves, otherwise show login link
+<!-- If user logged in say hello and show link to user faves, otherwise show login link
 -->
 	{% if 'logged_in' in session %}
 
@@ -18,18 +18,23 @@
 
 {% endblock %}
 {% block body %}
+
 <!-- for each recipe in db create a recipe card  
 Each recipe card link to page with all recipe details
 User can favorite recipe cards
 -->
+
 	{% for recipe in recipes %}
 	<div> <a href="/{{recipe.recipe_id}}"> {{recipe.recipe_name}} </a>
-		  Source: {{recipe.source_name}}
-		  <img src = "{{recipe.image}}" >  
-		  Ingredients: 
-		   {% for ingredient in ingredients %}
-		  {{ingredient}} /   
-		  {% endfor %}
+			{% if 'logged_in' in session %}
+				<button type="button" id ="recipe_card" name= {{recipe.recipe_id}}> Like it </button>
+			{% endif %}
+	  Source: {{recipe.source_name}}
+	  <img src = "{{recipe.image}}" >  
+	  Ingredients: 
+	  {% for ingredient in ingredients %}
+	  {{ingredient}} /   
+	  {% endfor %}
 		  
 		  <p></p>
 
@@ -37,5 +42,5 @@ User can favorite recipe cards
 	</div>
 	{% endfor %}
 
-
+ <script src="/static/recipeApp.js"> </script>
 {% endblock %}

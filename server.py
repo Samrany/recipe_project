@@ -27,13 +27,11 @@ def recipe_details(recipe_id):
 @app.route('/login') 
 def login():
     """Show the login page."""
-    # if login matches backend, return X otherwise return y
-
     return render_template("login.html")
+
 
 @app.route('/create_login')
 def create_login():
-
 
 	return render_template("create_login.html")
 
@@ -76,6 +74,7 @@ def check_login():
 		# session['user_obj'] = user
 		return redirect("/")
 	else:
+		flash("Wrong password. Try again.")
 		return redirect("/login")		
 
 
@@ -84,7 +83,7 @@ def check_login():
 def show_favorites():
 	#ID?
 	user_id = session.get('user_id')
-	print(user_id)
+	# print(user_id)
 	favorites = crud.get_user_faves(user_id)
 	user = crud.get_user_by_id(user_id) # SHOULDNT I BE ABLE TO ACCESS VIA SESSION?
 	name = user.first_name.title() #DELETE
@@ -92,11 +91,29 @@ def show_favorites():
 
 @app.route('/log_out')
 def log_out():
-	print(session.keys)
+	# print(session.keys)
 	session.clear()
-	print()
-	print(session.keys)
+	# print()
+	# print(session.keys)
 	return redirect("/")
+
+
+@app.route('/user_fave/<recipe_id>', methods = ['POST'])
+def user_fave(recipe_id):
+	# recipe_id = request.form.get("recipe_id")
+	crud.fave_recipe(session['user_id'], recipe_id)
+	
+	return redirect("/")
+
+
+@app.route('/faves/get_shopping_list', methods = ['POST'])
+def get_shopping_list():
+	num_recipes = request.form["num_recipes"]
+	print(num_recipes)
+	# recipes = 	
+
+	return render_template("shopping_list.html", recipes = recipes)
+
 
 if __name__ == '__main__':
 	connect_to_db(app)
