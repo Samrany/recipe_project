@@ -1,10 +1,12 @@
 """Server for recipe app."""
 
 from flask import (Flask, render_template, request, 
-				   flash, session, redirect)
+				   flash, session, redirect, jsonify)
 from model import connect_to_db
 import crud
 from jinja2 import StrictUndefined
+from random import sample
+
 
 
 app = Flask(__name__)
@@ -98,21 +100,37 @@ def log_out():
 	return redirect("/")
 
 
-@app.route('/user_fave/<recipe_id>', methods = ['POST'])
-def user_fave(recipe_id):
+@app.route('/user_fave', methods = ['POST','GET'])
+def user_fave():
+	recipe_id = request.form.get('recipe_id') 
 	# recipe_id = request.form.get("recipe_id")
 	crud.fave_recipe(session['user_id'], recipe_id)
 	
-	return redirect("/")
+	return jsonify({'status':'ok'})
 
 
 @app.route('/faves/get_shopping_list', methods = ['POST'])
 def get_shopping_list():
-	num_recipes = request.form["num_recipes"]
+	num_recipes = int(request.form["num_recipes"])
+	print("num recipes = ")
 	print(num_recipes)
-	# recipes = 	
+	user_id = session['user_id'] #Do I need this everytime?
+	all_faves = crud.get_user_faves(user_id)
 
-	return render_template("shopping_list.html", recipes = recipes)
+	print("this is all faves")
+	print(all_faves)
+	
+	recipes_to_cook = sample(all_faves,num_recipes)
+	print(recipes_to_cook)
+	
+	ingredients_needed = []
+	for fave_recipe in recipes_to_cook:
+		ingredients = fave_recipe.recipe.recipe_ingredients
+		ingredients_needed.append(ingredients)
+	print("these are the ingredients")
+	print(ingredients_needed)
+
+	return render_template("shopping_list.html", recipes_to_cook = recipes_to_cook, ingredients_needed = ingredients_needed)
 
 
 if __name__ == '__main__':

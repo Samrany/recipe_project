@@ -140,7 +140,7 @@ def get_recipe_by_id(recipe_id):
 def get_user_faves(user_id):
     """Get favorated recipes associated with a user_id"""
     # user_faves = Fave_recipes.query.filter_by(user_id = user.user_id)
-    user_faves = Fave_recipes.query.filter_by(user_id = user_id)
+    user_faves = Fave_recipes.query.filter_by(user_id = user_id).all()
 
     return user_faves
 

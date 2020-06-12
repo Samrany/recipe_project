@@ -5,6 +5,7 @@
 	
 <!-- If user logged in say hello and show link to user faves, otherwise show login link
 -->
+
 	{% if 'logged_in' in session %}
 
 		<div> Hi, {{session['name']}} </div>
@@ -19,6 +20,8 @@
 {% endblock %}
 {% block body %}
 
+<h2> Explore New Recipes </h2>
+
 <!-- for each recipe in db create a recipe card  
 Each recipe card link to page with all recipe details
 User can favorite recipe cards
@@ -27,7 +30,7 @@ User can favorite recipe cards
 	{% for recipe in recipes %}
 	<div> <a href="/{{recipe.recipe_id}}"> {{recipe.recipe_name}} </a>
 			{% if 'logged_in' in session %}
-				<button type="button" id ="recipe_card" name= {{recipe.recipe_id}}> Like it </button>
+				<button type="button" class ="recipe_card" name= {{recipe.recipe_id}}> Like it </button>
 			{% endif %}
 	  Source: {{recipe.source_name}}
 	  <img src = "{{recipe.image}}" >  
