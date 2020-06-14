@@ -7,6 +7,12 @@
 
 <div>
 
+	Recipe Links:
+	{% for recipe in recipes_to_cook %}
+	<li> <a href="/{{recipe.recipe_id}}"> {{recipe.recipe.recipe_name}} </a></li>
+	{% endfor %}
+
+	<p></p>
 	Ingredients: 
 	<form action='/faves/get_shopping_list' method="GET">
 	  
