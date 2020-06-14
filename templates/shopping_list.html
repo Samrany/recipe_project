@@ -7,31 +7,21 @@
 
 <div>
 
+	Ingredients: 
+	<form action='/faves/get_shopping_list' method="GET">
+	  
+		  {% for recipe_ingredients in ingredients_needed %}
+		  {% for ingredient in recipe_ingredients %}
+		  <input type="checkbox" name="ingredient">
+		  <label> {{ingredient.ingredient.ingredient_name}} {{ingredient.amount}} {{ingredient.metric}} 
+		  </label> </br>
 
-		  Ingredients: 
-		   {% for each in recipes_to_cook.recipe.recipe_ingredients %}
-<!-- 		   for each recipe in recipes to cook: recipe.recipe_ingredients -->
-		  {{each.ingredient.ingredient_name}} {{each.preparation}}: {{each.amount}} {{each.metric}}   
+
 		  {% endfor %}
-</div>
-<!-- 	{% for recipe in recipes_to_cook %} -->
-<!-- 	in a list print each ingredient and it's metric -->
-<!-- 	<li> {{recipe}} </li> -->
-<!-- 	<div> <a href="/{{recipe.recipe_id}}"> {{recipe.recipe_name}} </a>
-			{% if 'logged_in' in session %}
-				<button type="button" id ="recipe_card" name= {{recipe.recipe_id}}> Like it </button>
-			{% endif %}
-	  Source: {{recipe.source_name}}
-	  <img src = "{{recipe.image}}" >  
-	  Ingredients: 
-	  {% for ingredient in ingredients %}
-	  {{ingredient}} /   
-	  {% endfor %}
-		  
-		  <p></p> -->
+		  {% endfor %}
 
 
+	</form>
 
-	{% endfor %}
 
 {% endblock %}

@@ -5,21 +5,16 @@ $('.recipe_card').on('click', (evt) => {
 	evt.preventDefault();
 
 	let recipe_id = evt.currentTarget.name
-	evt.currentTarget.innerHTML = "Liked!"
-
-
-	console.log(evt)
-	console.log(evt.currentTarget.name)
-	console.log(evt.currentTarget.innerHTML)
-	// let recipe = document.getElementById('.recipe_card')
-	// console.log(recipe)
 	
-	// recipe.innerHTML = "Liked!"
-	// let recipe_id = recipe.name
+	// console.log(evt)
+	// console.log(evt.currentTarget.name)
+	// console.log(evt.currentTarget.innerHTML)
 		
-	
 	$.post('/user_fave', {'recipe_id':recipe_id}, (response) =>{
-		// liked button. if
+		
+		// if response at status = ok then:
+		evt.currentTarget.innerHTML = "Liked!"
+		// otherwise print "You've already liked this one"
 	});
 });
 

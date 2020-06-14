@@ -103,13 +103,19 @@ def log_out():
 @app.route('/user_fave', methods = ['POST','GET'])
 def user_fave():
 	recipe_id = request.form.get('recipe_id') 
-	# recipe_id = request.form.get("recipe_id")
-	crud.fave_recipe(session['user_id'], recipe_id)
-	
-	return jsonify({'status':'ok'})
+	user_id = session['user_id']
+
+	# if Fave_recipes.query.filter_by(user_id=user_id, recipe_id = recipe_id).all:
+	# 	print("RETURNING FALSE")
+	# 	return jsonify({'status': False })
+
+	# else:
+	crud.fave_recipe(user_id, recipe_id)
+	print("RETURNING TRUE")
+	return jsonify({'status': True })
 
 
-@app.route('/faves/get_shopping_list', methods = ['POST'])
+@app.route('/faves/get_shopping_list', methods = ['POST', 'GET'])
 def get_shopping_list():
 	num_recipes = int(request.form["num_recipes"])
 	print("num recipes = ")
@@ -123,7 +129,7 @@ def get_shopping_list():
 	recipes_to_cook = sample(all_faves,num_recipes)
 	print(recipes_to_cook)
 	
-	ingredients_needed = []
+	ingredients_needed = [] # a list of recipe_ingredient objects
 	for fave_recipe in recipes_to_cook:
 		ingredients = fave_recipe.recipe.recipe_ingredients
 		ingredients_needed.append(ingredients)
