@@ -9,16 +9,17 @@
 	{% if 'logged_in' in session %}
 
 		<div> Hi, {{session['name']}} </div>
-		<div><a href = "/faves"> My Favorites </div>
-		<div><a href = "/log_out"> Logout </div>		
+		<div><a href = "/faves"> My Favorites</a></div>
+		<div><a href = "/log_out"> Logout </a></div>		
 	{% else %}
 		<div><a href = "/login"> Login </a></div>
 		<div> or </div>
-		<div><a href = "/create_login"> Create Account </a></div>
+		<div><a href = "/create_login"> Create Account </a> </div>
 	{% endif %}
 
 {% endblock %}
 {% block body %}
+
 
 <h2> Explore New Recipes </h2>
 

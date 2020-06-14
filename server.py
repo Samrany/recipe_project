@@ -83,12 +83,10 @@ def check_login():
 
 @app.route('/faves')
 def show_favorites():
-	#ID?
 	user_id = session.get('user_id')
-	# print(user_id)
 	favorites = crud.get_user_faves(user_id)
-	user = crud.get_user_by_id(user_id) # SHOULDNT I BE ABLE TO ACCESS VIA SESSION?
-	name = user.first_name.title() #DELETE
+	user = crud.get_user_by_id(user_id) # SHOULDNT I BE ABLE TO ACCESS object VIA SESSION?
+	name = user.first_name.title() 
 	return render_template("user_favorites.html", favorites = favorites, name = name)
 
 @app.route('/log_out')
@@ -110,6 +108,8 @@ def user_fave():
 	# 	return jsonify({'status': False })
 
 	# else:
+	#(Above functionality was giving me issues so reverted back for now. May instead filter recipes
+	# on homepage that user can like by showing those that aren't in user favorites yet)
 	crud.fave_recipe(user_id, recipe_id)
 	print("RETURNING TRUE")
 	return jsonify({'status': True })
@@ -120,7 +120,7 @@ def get_shopping_list():
 	num_recipes = int(request.form["num_recipes"])
 	print("num recipes = ")
 	print(num_recipes)
-	user_id = session['user_id'] #Do I need this everytime?
+	user_id = session['user_id'] 
 	all_faves = crud.get_user_faves(user_id)
 
 	print("this is all faves")
@@ -129,7 +129,7 @@ def get_shopping_list():
 	recipes_to_cook = sample(all_faves,num_recipes)
 	print(recipes_to_cook)
 	
-	ingredients_needed = [] # a list of recipe_ingredient objects
+	ingredients_needed = [] 
 	for fave_recipe in recipes_to_cook:
 		ingredients = fave_recipe.recipe.recipe_ingredients
 		ingredients_needed.append(ingredients)
