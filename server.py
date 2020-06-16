@@ -20,10 +20,9 @@ def homepage():
     ingredients = crud.all_ingredients_by_name()
     return render_template("homepage.html", recipes = recipes, ingredients = ingredients)
 
-
-@app.route('/<recipe_id>')
+@app.route('/<int:recipe_id>')
 def recipe_details(recipe_id):
-	recipe =crud.get_recipe_by_id(recipe_id)
+	recipe = crud.get_recipe_by_id(recipe_id)
 	return render_template("recipe_details.html", recipe = recipe)
 
 @app.route('/login') 

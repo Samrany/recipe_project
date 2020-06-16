@@ -31,7 +31,9 @@ User can favorite recipe cards
 	{% for recipe in recipes %}
 	<div> <a href="/{{recipe.recipe_id}}"> {{recipe.recipe_name}} </a>
 			{% if 'logged_in' in session %}
-				<button type="button" class ="recipe_card" name= {{recipe.recipe_id}}> Like it </button>
+				<button type="button" class="btn btn-primary recipe_card" name= {{recipe.recipe_id}}>
+					Like It </button>
+<!-- 				<button type="button" class ="recipe_card" name= {{recipe.recipe_id}}> Like it </button> -->
 			{% endif %}
 	  Source: {{recipe.source_name}}
 	  <img src = "{{recipe.image}}" >  
