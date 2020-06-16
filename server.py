@@ -126,15 +126,14 @@ def get_shopping_list():
 	user_id = session['user_id'] 
 	all_faves = crud.get_user_faves(user_id)
 	recipes_to_cook = sample(all_faves,num_recipes)
-	# print(recipes_to_cook)
 	
 	ingredients_needed = [] 
 	for fave_recipe in recipes_to_cook:
 		ingredients = fave_recipe.recipe.recipe_ingredients
-		ingredients_needed.append(ingredients)
-	# print("these are the ingredients")
-	# print(ingredients_needed)
-	send_email.send_email(session['email'], session['name'], "recipe_link", ["orange", "apple"])
+		for ingredient in ingredients:
+			ingredients_needed.append(ingredient)
+
+	send_email.send_email(session['email'], session['name'], recipes_to_cook, ingredients_needed)
 	return render_template("shopping_list.html", recipes_to_cook = recipes_to_cook, ingredients_needed = ingredients_needed)
 
 

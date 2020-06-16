@@ -5,16 +5,20 @@ import os
 
 
 def return_html_checklist(ingredient_list):
-	"""Takes a list of ingredients """
+	"""Takes a list of ingredients and returns html checklist items"""
 	html_ingredients = " "
 	for ingredient in ingredient_list:
-		html_ingredients += f'<input type="checkbox" name="ingredient"><label> {ingredient} </label> <br>'
+		html_ingredients += f'<input type="checkbox" name="ingredient"><label> {ingredient.ingredient.ingredient_name}  {ingredient.amount} {ingredient.metric} </label> <br>'
 	return(html_ingredients)
-		
 
+def return_html_hyperlinks(recipes):
+	"""Takes a list of recipe objects and returns html links"""
+	hyperlinks =  " "
+	for recipe in recipes:
+		hyperlinks += f'<li> <a href="/{recipe.recipe_id}"> {recipe.recipe.recipe_name} </a> </li>'
+	return(hyperlinks)
 
-
-def send_email(user_email, user_name, recipe_links, recipe_ingredients):
+def send_email(user_email, user_name, recipes, recipe_ingredients):
 	port = 465  # For SSL
 	smtp_server = "smtp.gmail.com"
 	sender_email = "cookmoreofwhatyoulove@gmail.com"
@@ -31,31 +35,25 @@ def send_email(user_email, user_name, recipe_links, recipe_ingredients):
 	# The plain-text and HTML version of the message
 	text = """\
 
-	Hi,
-	Here are your recipe links:
-	Here are your shopping ingredients:
-	1
-	2"""
+	Your Email does not support html. Please refer to the webpage instead."""
 
 	html = f"""\
-
 
 	<html>
 	  <body>
 	    <p> Hi, {user_name} <br>
-	       Here are your recipe links:<br>
-	       <a href="http://www.realpython.com">Recipe 1</a> <br>
-	       Here are your shopping ingredients:
+
+	       Here are your recipe links:
+	       {return_html_hyperlinks(recipes)}
+     
+	      Here are your shopping ingredients:
 	      <form action="/action_page.php" method="get"> {return_html_checklist(recipe_ingredients)}
-
-
 		  </form> 
 		     
 	    </p>
 	  </body>
 	</html>
 	"""
-	# <input type="checkbox"> <label> Oranges </label><br>
 
 	# Turn these into plain/html MIMEText objects
 	part1 = MIMEText(text, "plain")
@@ -73,4 +71,3 @@ def send_email(user_email, user_name, recipe_links, recipe_ingredients):
 	    email_server.sendmail(sender_email, receiver_email, message.as_string())
 
 
-# send_email("Shira.Amrany@gmail.com", "Shira", "recipe_link", ["orange", "apple"])
