@@ -4,7 +4,8 @@ from email.mime.multipart import MIMEMultipart
 import os
 
 
-def loop_print_list(ingredient_list):
+def return_html_checklist(ingredient_list):
+	"""Takes a list of ingredients """
 	html_ingredients = " "
 	for ingredient in ingredient_list:
 		html_ingredients += f'<input type="checkbox" name="ingredient"><label> {ingredient} </label> <br>'
@@ -45,7 +46,7 @@ def send_email(user_email, user_name, recipe_links, recipe_ingredients):
 	       Here are your recipe links:<br>
 	       <a href="http://www.realpython.com">Recipe 1</a> <br>
 	       Here are your shopping ingredients:
-	      <form action="/action_page.php" method="get"> {loop_print_list(recipe_ingredients)}
+	      <form action="/action_page.php" method="get"> {return_html_checklist(recipe_ingredients)}
 
 
 		  </form> 
@@ -72,4 +73,4 @@ def send_email(user_email, user_name, recipe_links, recipe_ingredients):
 	    email_server.sendmail(sender_email, receiver_email, message.as_string())
 
 
-send_email("Shira.Amrany@gmail.com", "Shira", "recipe_link", ["orange", "apple"])
+# send_email("Shira.Amrany@gmail.com", "Shira", "recipe_link", ["orange", "apple"])

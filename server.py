@@ -6,6 +6,7 @@ from model import connect_to_db
 import crud
 from jinja2 import StrictUndefined
 from random import sample
+import send_email
 
 
 
@@ -57,7 +58,8 @@ def register_user():
 		session['logged_in'] = True
 		session['name'] = user.first_name.title()
 		session['user_id'] = user.user_id
-		# session['user_obj'] = user
+		session['email'] = user.email
+
 		return redirect("/")
 
 
@@ -72,10 +74,13 @@ def check_login():
 		session['logged_in'] = True
 		session['name'] = user.first_name.title()
 		session['user_id'] = user.user_id
-		# session['user_obj'] = user
+		session['email'] = user.email
+	
 		return redirect("/")
+	
 	else:
 		flash("Wrong password. Try again.")
+		
 		return redirect("/login")		
 
 
@@ -116,25 +121,20 @@ def user_fave():
 
 @app.route('/faves/get_shopping_list', methods = ['POST', 'GET'])
 def get_shopping_list():
+	
 	num_recipes = int(request.form["num_recipes"])
-	print("num recipes = ")
-	print(num_recipes)
 	user_id = session['user_id'] 
 	all_faves = crud.get_user_faves(user_id)
-
-	print("this is all faves")
-	print(all_faves)
-	
 	recipes_to_cook = sample(all_faves,num_recipes)
-	print(recipes_to_cook)
+	# print(recipes_to_cook)
 	
 	ingredients_needed = [] 
 	for fave_recipe in recipes_to_cook:
 		ingredients = fave_recipe.recipe.recipe_ingredients
 		ingredients_needed.append(ingredients)
-	print("these are the ingredients")
-	print(ingredients_needed)
-
+	# print("these are the ingredients")
+	# print(ingredients_needed)
+	send_email.send_email(session['email'], session['name'], "recipe_link", ["orange", "apple"])
 	return render_template("shopping_list.html", recipes_to_cook = recipes_to_cook, ingredients_needed = ingredients_needed)
 
 
