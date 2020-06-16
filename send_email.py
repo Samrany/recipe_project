@@ -7,7 +7,7 @@ import os
 def loop_print_list(ingredient_list):
 	html_ingredients = " "
 	for ingredient in ingredient_list:
-		html_ingredients += f'<li><input type="checkbox" name="ingredient"><label> {ingredient} </label> </li><br>'
+		html_ingredients += f'<input type="checkbox" name="ingredient"><label> {ingredient} </label> <br>'
 	return(html_ingredients)
 		
 
