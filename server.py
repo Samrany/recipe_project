@@ -23,6 +23,7 @@ def homepage():
 
 @app.route('/<int:recipe_id>')
 def recipe_details(recipe_id):
+	"""Show full recipe details for a specific recipe."""
 	recipe = crud.get_recipe_by_id(recipe_id)
 	return render_template("recipe_details.html", recipe = recipe)
 
@@ -33,6 +34,7 @@ def login():
 
 
 @app.route('/create_login')
+	"""Show create login page."""
 def create_login():
 
 	return render_template("create_login.html")
@@ -41,11 +43,12 @@ def create_login():
 @app.route('/users', methods = ['POST'])
 def register_user():
 	"""Create a new user."""
+
 	email = request.form["e-mail"] #work with a dict
 	# Assert e-mail is not None # works with other objects/formats as well
-	password = request.form.get("password") ################
-	first_name = request.form.get("f_name")
-	last_name = request.form.get("l_name")
+	password = request.form["password"]
+	first_name = request.form["f_name"]
+	last_name = request.form["l_name"]
 	user = crud.get_user_by_email(email)
 
 
@@ -65,7 +68,7 @@ def register_user():
 
 @app.route('/log_in_form', methods = ['POST'])
 def check_login():
-	"""Log in User"""
+	"""Log in User if account previously created"""
 	email = request.form["e-mail"]
 	password = request.form["password"]
 	user = crud.get_user_by_email(email)
@@ -87,23 +90,26 @@ def check_login():
 
 @app.route('/faves')
 def show_favorites():
+	"""Show a user's favorite recipes"""
 	user_id = session.get('user_id')
 	favorites = crud.get_user_faves(user_id)
-	user = crud.get_user_by_id(user_id) # SHOULDNT I BE ABLE TO ACCESS object VIA SESSION?
+	user = crud.get_user_by_id(user_id) 
 	name = user.first_name.title() 
+
 	return render_template("user_favorites.html", favorites = favorites, name = name)
 
 @app.route('/log_out')
 def log_out():
-	# print(session.keys)
+	"""Log out a user and clear session"""
+
 	session.clear()
-	# print()
-	# print(session.keys)
+
 	return redirect("/")
 
 
 @app.route('/user_fave', methods = ['POST','GET'])
 def user_fave():
+	"""Allow user to favorite a recipe"""
 	recipe_id = request.form.get('recipe_id') 
 	user_id = session['user_id']
 
@@ -121,20 +127,34 @@ def user_fave():
 
 @app.route('/faves/get_shopping_list', methods = ['POST', 'GET'])
 def get_shopping_list():
+	"""Show and email shopping list based on number of recipes chosen"""
 	
 	num_recipes = int(request.form["num_recipes"])
 	user_id = session['user_id'] 
 	all_faves = crud.get_user_faves(user_id)
-	recipes_to_cook = sample(all_faves,num_recipes)
-	
-	ingredients_needed = [] 
-	for fave_recipe in recipes_to_cook:
-		ingredients = fave_recipe.recipe.recipe_ingredients
-		for ingredient in ingredients:
-			ingredients_needed.append(ingredient)
 
-	send_email.send_email(session['email'], session['name'], recipes_to_cook, ingredients_needed)
-	return render_template("shopping_list.html", recipes_to_cook = recipes_to_cook, ingredients_needed = ingredients_needed)
+	#Ensure a user can't try to create a shopping list for more recipes than in favorites
+	if num_recipes > len(all_faves):
+		flash(f"You haven't favorited that many recipes yet! Choose {len(all_faves)} or lower, or add more favorites! ")
+		return redirect ("/faves")
+		# change from html flash to JS Alert?
+	
+	#If ok, output recipe links and ingredient shopping list 
+	else:
+		recipes_to_cook = sample(all_faves,num_recipes)
+		ingredients_needed = [] 
+		for fave_recipe in recipes_to_cook:
+			ingredients = fave_recipe.recipe.recipe_ingredients
+			for ingredient in ingredients:
+				ingredients_needed.append(ingredient)
+
+		# temporarily passing my e-mail instead of session['email'].
+		
+		#Calling send e-mail function
+		send_email.send_email(shira.amrany@gmail.com, session['name'], recipes_to_cook, ingredients_needed)
+		
+		#Returning same info to shopping list page
+		return render_template("shopping_list.html", recipes_to_cook = recipes_to_cook, ingredients_needed = ingredients_needed)
 
 
 if __name__ == '__main__':
