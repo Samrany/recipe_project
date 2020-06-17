@@ -34,8 +34,8 @@ def login():
 
 
 @app.route('/create_login')
-	"""Show create login page."""
 def create_login():
+	"""Show create login page."""
 
 	return render_template("create_login.html")
 

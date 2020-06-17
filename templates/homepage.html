@@ -28,25 +28,60 @@ Each recipe card link to page with all recipe details
 User can favorite recipe cards
 -->
 
-	{% for recipe in recipes %}
+<!-- 	{% for recipe in recipes %}
+
 	<div> <a href="/{{recipe.recipe_id}}"> {{recipe.recipe_name}} </a>
 			{% if 'logged_in' in session %}
 				<button type="button" class="btn btn-primary recipe_card" name= {{recipe.recipe_id}}>
 					Like It </button>
-<!-- 				<button type="button" class ="recipe_card" name= {{recipe.recipe_id}}> Like it </button> -->
+				<button type="button" class ="recipe_card" name= {{recipe.recipe_id}}> Like it </button>
 			{% endif %}
-	  Source: {{recipe.source_name}}
-	  <img src = "{{recipe.image}}" >  
-	  Ingredients: 
-	  {% for ingredient in ingredients %}
-	  {{ingredient}} /   
-	  {% endfor %}
+	  
+		  Source: {{recipe.source_name}}
+		  <img src = "{{recipe.image}}" >  
+		  Ingredients: 
 		  
+		  {% for ingredient in ingredients %}
+		  {{ingredient}} /   
+		  {% endfor %}
+			  
 		  <p></p>
 
 
 	</div>
-	{% endfor %}
+	{% endfor %} -->
 
- <script src="/static/recipeApp.js"> </script>
+
+<!--  <div class="card-deck"> -->
+<div class="row row-cols-1 row-cols-md-3">
+	{% for recipe in recipes %}
+		<div class="col mb-4">
+			<div class="card" style="width: 18rem;">
+			  <a href="/{{recipe.recipe_id}}">
+			  <img src="{{recipe.image}}" class="card-img-top" >
+			  </a>
+			  <div class="card-body" >
+			    <h5 class="card-title"> {{recipe.recipe_name}} </h5>
+			    <h6 class="card-subtitle mb-2 text-muted">Source: {{recipe.source_name}}</h6>
+
+			    <p class="card-text">
+			    	Ingredients: 
+					  {% for ingredient in ingredients %}
+					  {{ingredient}},     
+					  {% endfor %}
+			    </p>
+
+			    {% if 'logged_in' in session %}
+			    <button type="button" class="btn btn-outline-primary recipe_card" name= {{recipe.recipe_id}}> Like It 
+			    </button>
+			    {% endif %}
+			  
+			  </div>
+			</div>
+	</div>
+		
+	{% endfor %}
+</div>
+<script src="/static/recipeApp.js"> </script>
+
 {% endblock %}
