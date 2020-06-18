@@ -2,11 +2,13 @@
 
 from flask import (Flask, render_template, request, 
 				   flash, session, redirect, jsonify)
+
 from model import connect_to_db
 import crud
 from jinja2 import StrictUndefined
 from random import sample
 import send_email
+import metrics
 
 
 
@@ -132,7 +134,6 @@ def get_shopping_list():
 	
 	num_recipes = int(request.form["num_recipes"])
 	user_id = session['user_id'] 
-	user_name = session['name']
 	all_faves = crud.get_user_faves(user_id)
 
 	#Ensure a user can't try to create a shopping list for more recipes than in favorites
@@ -141,41 +142,15 @@ def get_shopping_list():
 		return redirect ("/faves")
 		# change from html flash to JS Alert?
 	
-	#If ok, output recipe links and ingredient shopping list 
+	#If ok, create shopping list, send e-mail with checklist, and return same info to page
 	else:
 		recipes_to_cook = sample(all_faves,num_recipes)
 		
-		shopping_list_dict = {}
+		shopping_list_dict = metrics.create_shopping_list(recipes_to_cook)
 
-		#move all below to a separate function in metrics.py
-		for fave_recipe in recipes_to_cook:
-			recipe_ingredients = fave_recipe.recipe.recipe_ingredients
-	
-			for recipe_ingredient in recipe_ingredients:
-				
-				if recipe_ingredient.ingredient in shopping_list_dict:
-					if shopping_list_dict[recipe_ingredient.ingredient]['metric'] != recipe_ingredient.metric:
-						print("They don't match")
-						#DO METRIC CONVERSION
-
-					# Add amounts
-					print(f"{recipe_ingredient.ingredient} already in list")
-					print(f"amount was: {shopping_list_dict[recipe_ingredient.ingredient]['amount']}")
-					print(f"adding {recipe_ingredient.amount}")
-					shopping_list_dict[recipe_ingredient.ingredient]['amount'] += recipe_ingredient.amount
-					print(f"amount now is: {shopping_list_dict[recipe_ingredient.ingredient]['amount']}")
-				else:
-					shopping_list_dict[recipe_ingredient.ingredient] = {'amount': recipe_ingredient.amount, 'metric': recipe_ingredient.metric}
-					print(f"{recipe_ingredient.ingredient} added")
-
-
-		# temporarily passing my e-mail instead of session['email'].
-		
-		#Calling send e-mail function
+		# ****temporarily passing my e-mail instead of session['email'].
 		send_email.send_email('shira.amrany@gmail.com', session['name'], recipes_to_cook, shopping_list_dict)
 		
-		#Returning same info to shopping list page
-		# return render_template("shopping_list.html", recipes_to_cook = recipes_to_cook, ingredients_needed = ingredients_needed)
 		return render_template("shopping_list.html", recipes_to_cook = recipes_to_cook, shopping_list_dict = shopping_list_dict)
 
 if __name__ == '__main__':
