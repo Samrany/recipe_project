@@ -131,6 +131,7 @@ def get_shopping_list():
 	
 	num_recipes = int(request.form["num_recipes"])
 	user_id = session['user_id'] 
+	user_name = session['name']
 	all_faves = crud.get_user_faves(user_id)
 
 	#Ensure a user can't try to create a shopping list for more recipes than in favorites
@@ -142,20 +143,50 @@ def get_shopping_list():
 	#If ok, output recipe links and ingredient shopping list 
 	else:
 		recipes_to_cook = sample(all_faves,num_recipes)
-		ingredients_needed = [] 
+		ingredients_needed = []
+		shopping_list_dict = {}
+
 		for fave_recipe in recipes_to_cook:
-			ingredients = fave_recipe.recipe.recipe_ingredients
-			for ingredient in ingredients:
-				ingredients_needed.append(ingredient)
+
+			recipe_ingredients = fave_recipe.recipe.recipe_ingredients
+	
+			for recipe_ingredient in recipe_ingredients:
+				
+				# #ADDING TO LIST TO OUTPUT - OLD
+				# ingredients_needed.append(recipe_ingredient)
+
+				#REFACTORING INTO DICTIONARY INSTEAD OF LIST
+				if recipe_ingredient.ingredient in shopping_list_dict:
+					if shopping_list_dict[recipe_ingredient.ingredient]['metric'] != recipe_ingredient.metric:
+						print("They don't match")
+						#DO METRIC CONVERSION
+
+					# Add amounts
+					print(f"{recipe_ingredient.ingredient} already in list")
+					print(f"amount was: {shopping_list_dict[recipe_ingredient.ingredient]['amount']}")
+					print(f"adding {recipe_ingredient.amount}")
+					shopping_list_dict[recipe_ingredient.ingredient]['amount'] += recipe_ingredient.amount
+					print(f"amount now is: {shopping_list_dict[recipe_ingredient.ingredient]['amount']}")
+				else:
+					shopping_list_dict[recipe_ingredient.ingredient] = {'amount': recipe_ingredient.amount, 'metric': recipe_ingredient.metric}
+					print(f"{recipe_ingredient.ingredient} added")
+
+		print(shopping_list_dict)
+		for item in shopping_list_dict:
+			print(item.ingredient_name)
+			print(shopping_list_dict[item]['amount'])
+			print(shopping_list_dict[item]['metric'])
+
+
 
 		# temporarily passing my e-mail instead of session['email'].
 		
 		#Calling send e-mail function
-		send_email.send_email(shira.amrany@gmail.com, session['name'], recipes_to_cook, ingredients_needed)
+		# send_email.send_email('shira.amrany@gmail.com', session['name'], recipes_to_cook, ingredients_needed)
 		
 		#Returning same info to shopping list page
-		return render_template("shopping_list.html", recipes_to_cook = recipes_to_cook, ingredients_needed = ingredients_needed)
-
+		# return render_template("shopping_list.html", recipes_to_cook = recipes_to_cook, ingredients_needed = ingredients_needed)
+		return render_template("shopping_list.html", recipes_to_cook = recipes_to_cook, shopping_list_dict = shopping_list_dict)
 
 if __name__ == '__main__':
 	connect_to_db(app)

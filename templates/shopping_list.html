@@ -15,11 +15,11 @@
 	<p></p>
 	Ingredients: 
 	<form action='/faves/get_shopping_list' method="GET">
-	  
-		  {% for ingredient in ingredients_needed %}
+
+		  {% for item in shopping_list_dict %}
 
 		  <input type="checkbox" name="ingredient">
-		  <label> {{ingredient.ingredient.ingredient_name}} {{ingredient.amount}} {{ingredient.metric}} 
+		  <label> {{item.ingredient_name}} {{shopping_list_dict[item]['amount']}} {{shopping_list_dict[item]['metric']}}
 		  </label> </br>
 
 		  {% endfor %}
