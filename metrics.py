@@ -60,10 +60,7 @@ def create_shopping_list(recipes_to_cook):
 				if check_if_same_unit(existing_metric_in_dict, current_metric_evaluated):
 					existing_amount_in_dict += current_amount_to_add		
 
-
-
-				# print(f"adding {recipe_ingredient.amount}")
-				
+		
 				# Add amounts for ingredient where metric is same
 				else:
 					converted_amount_to_add = spoonacular_metric_conversion(recipe_ingredient.ingredient,
@@ -83,26 +80,6 @@ def create_shopping_list(recipes_to_cook):
 
 
 	return shopping_list_dict			
-
-
-
-
-
-
-# for ingredient in list:
-	#if ingredient in dictionary:
-		#if metrics don't match:
-			#do some conversion, TBD:
-		# add amounts together and change amount value 
-	#else:
-		# append to list as dictionary object {plain ingredient object:[{amount: }{metric: }]}
-
-#??? What about where metric = none. Change none = unit as default?
-
-#converion function:
-# function(amt1, metric1, amt2, metric2)
-# return 
-
 
 
 
