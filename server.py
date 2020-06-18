@@ -14,6 +14,7 @@ app = Flask(__name__)
 app.secret_key = "Shira"
 app.jinja_env.undefined = StrictUndefined
 
+
 @app.route('/') 
 def homepage():
     """Show the homepage."""
@@ -143,19 +144,15 @@ def get_shopping_list():
 	#If ok, output recipe links and ingredient shopping list 
 	else:
 		recipes_to_cook = sample(all_faves,num_recipes)
-		ingredients_needed = []
+		
 		shopping_list_dict = {}
 
+		#move all below to a separate function in metrics.py
 		for fave_recipe in recipes_to_cook:
-
 			recipe_ingredients = fave_recipe.recipe.recipe_ingredients
 	
 			for recipe_ingredient in recipe_ingredients:
 				
-				# #ADDING TO LIST TO OUTPUT - OLD
-				# ingredients_needed.append(recipe_ingredient)
-
-				#REFACTORING INTO DICTIONARY INSTEAD OF LIST
 				if recipe_ingredient.ingredient in shopping_list_dict:
 					if shopping_list_dict[recipe_ingredient.ingredient]['metric'] != recipe_ingredient.metric:
 						print("They don't match")
@@ -170,13 +167,6 @@ def get_shopping_list():
 				else:
 					shopping_list_dict[recipe_ingredient.ingredient] = {'amount': recipe_ingredient.amount, 'metric': recipe_ingredient.metric}
 					print(f"{recipe_ingredient.ingredient} added")
-
-		print(shopping_list_dict)
-		for item in shopping_list_dict:
-			print(item.ingredient_name)
-			print(shopping_list_dict[item]['amount'])
-			print(shopping_list_dict[item]['metric'])
-
 
 
 		# temporarily passing my e-mail instead of session['email'].
