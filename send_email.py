@@ -4,11 +4,15 @@ from email.mime.multipart import MIMEMultipart
 import os
 
 
-def return_html_checklist(ingredient_list):
-	"""Takes a list of ingredients and returns html checklist items"""
+def return_html_checklist(shopping_list_dict):
+	"""Takes a dictionary of ingredients with dictionary value containing "amount" and "metric"
+	and returns html checklist items"""
+
 	html_ingredients = " "
-	for ingredient in ingredient_list:
-		html_ingredients += f'<input type="checkbox" name="ingredient"><label> {ingredient.ingredient.ingredient_name}  {ingredient.amount} {ingredient.metric} </label> <br>'
+	for item in shopping_list_dict:
+		amount = shopping_list_dict[item]['amount']
+		metric = shopping_list_dict[item]['metric']
+		html_ingredients += f'<input type="checkbox" name="ingredient"><label> {item.ingredient_name} {amount} {metric} </label> <br>'
 	return(html_ingredients)
 
 def return_html_hyperlinks(recipes):

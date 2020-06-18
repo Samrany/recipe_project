@@ -182,7 +182,7 @@ def get_shopping_list():
 		# temporarily passing my e-mail instead of session['email'].
 		
 		#Calling send e-mail function
-		# send_email.send_email('shira.amrany@gmail.com', session['name'], recipes_to_cook, ingredients_needed)
+		send_email.send_email('shira.amrany@gmail.com', session['name'], recipes_to_cook, shopping_list_dict)
 		
 		#Returning same info to shopping list page
 		# return render_template("shopping_list.html", recipes_to_cook = recipes_to_cook, ingredients_needed = ingredients_needed)
