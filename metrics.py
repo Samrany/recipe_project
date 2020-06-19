@@ -30,9 +30,10 @@ def spoonacular_metric_conversion(ingredientName, sourceAmount, sourceUnit, targ
 
 
 def check_if_same_unit(unit1, unit2):
-	"""Checks if unit1 and unit2 are plural and singular versions of same metric"""
-	#ADD in REGEX functionality to comapre singular to plural
-	return (unit1 == unit2)
+	"""Checks if strings unit1 and unit2 are the same metric or plural/singular versions of same metric"""
+
+	if unit1 == unit2 or unit1 == unit2 + "s" or unit2 == unit1 + "s":
+		return True
 
 
 

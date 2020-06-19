@@ -9,10 +9,15 @@ def return_html_checklist(shopping_list_dict):
 	and returns html checklist items"""
 
 	html_ingredients = " "
+
 	for item in shopping_list_dict:
 		amount = shopping_list_dict[item]['amount']
 		metric = shopping_list_dict[item]['metric']
-		html_ingredients += f'<input type="checkbox" name="ingredient"><label> {item.ingredient_name} {amount} {metric} </label> <br>'
+		if metric == None:
+			html_ingredients += f'<input type="checkbox" name="ingredient"><label> {item.ingredient_name} {amount} </label> <br>'
+		else:
+			html_ingredients += f'<input type="checkbox" name="ingredient"><label> {item.ingredient_name} {amount} {metric} </label> <br>'
+	
 	return(html_ingredients)
 
 def return_html_hyperlinks(recipes):
