@@ -11,7 +11,7 @@ def spoonacular_metric_conversion(ingredientName, sourceAmount, sourceUnit, targ
 
 	payload = {'ingredientName': ingredientName,
 				'sourceAmount': sourceAmount,
-				'soureUnit': sourceUnit,
+				'sourceUnit': sourceUnit,
 				'targetUnit': targetUnit,
 				'apiKey': SPOONACULAR_KEY}
 
@@ -22,6 +22,7 @@ def spoonacular_metric_conversion(ingredientName, sourceAmount, sourceUnit, targ
 	output_amount = conversion['targetAmount']
 	print(conversion)
 	print(output_amount)
+	
 	# NEED TO HANDLE SITUATIONS WHERE OUTPUT IS NONE
 
 	return output_amount
@@ -30,7 +31,7 @@ def spoonacular_metric_conversion(ingredientName, sourceAmount, sourceUnit, targ
 
 def check_if_same_unit(unit1, unit2):
 	"""Checks if unit1 and unit2 are plural and singular versions of same metric"""
-	#ADD in functionality to comapre singular to plural
+	#ADD in REGEX functionality to comapre singular to plural
 	return (unit1 == unit2)
 
 
@@ -57,6 +58,7 @@ def create_shopping_list(recipes_to_cook):
 
 				print(f"{recipe_ingredient.ingredient} already in list")
 				print(f"amount was: {existing_amount_in_dict}")
+				
 				if check_if_same_unit(existing_metric_in_dict, current_metric_evaluated):
 					existing_amount_in_dict += current_amount_to_add		
 
