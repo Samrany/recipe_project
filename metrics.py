@@ -15,17 +15,21 @@ def spoonacular_metric_conversion(ingredientName, sourceAmount, sourceUnit, targ
 				'targetUnit': targetUnit,
 				'apiKey': SPOONACULAR_KEY}
 
+	#TRY EXCEPT to avoid ERROR
+	try:
+		response = requests.get(url, params=payload)
+		conversion = response.json()
+		output_amount = conversion['targetAmount']
+		print(response.url)
+		print(conversion)
+		print(output_amount)
+		return output_amount
 	
-	response = requests.get(url, params=payload)
-	conversion = response.json()
-	print(response.url)
-	output_amount = conversion['targetAmount']
-	print(conversion)
-	print(output_amount)
-	
+	except:
+		return 0
 	# NEED TO HANDLE SITUATIONS WHERE OUTPUT IS NONE
 
-	return output_amount
+	
 
 
 
