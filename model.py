@@ -94,7 +94,7 @@ class Recipe_ingredients(db.Model):
     recipe_id = db.Column(db.Integer, db.ForeignKey('recipes.recipe_id'))
     ingredient_id = db.Column(db.Integer, db.ForeignKey('ingredients.ingredient_id'))
     amount = db.Column(db.Float, nullable = False)
-    metric = db.Column(db.String, default = "serving") # should Metric be another table?
+    metric = db.Column(db.String) # should Metric be another table?
     preparation = db.Column(db.String)
 
     ingredient = db.relationship("Ingredient")
