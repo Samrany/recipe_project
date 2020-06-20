@@ -47,7 +47,7 @@ def create_login():
 def register_user():
 	"""Create a new user."""
 
-	email = request.form["e-mail"] #work with a dict
+	email = request.form["e-mail"] 
 	# Assert e-mail is not None # works with other objects/formats as well
 	password = request.form["password"]
 	first_name = request.form["f_name"]
