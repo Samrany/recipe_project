@@ -43,9 +43,11 @@ User can favorite recipe cards
 
 			    <p class="card-text">
 			    	Ingredients: 
-					  {% for ingredient in ingredients %}
-					  {{ingredient}},     
+					  {% for recipe_ingredient in recipe.recipe_ingredients %}
+					  {{recipe_ingredient.ingredient.ingredient_name}},     
 					  {% endfor %}
+
+
 			    </p>
 
 			    {% if 'logged_in' in session %}

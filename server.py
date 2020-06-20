@@ -21,8 +21,7 @@ app.jinja_env.undefined = StrictUndefined
 def homepage():
     """Show the homepage."""
     recipes = crud.all_recipes()
-    ingredients = crud.all_ingredients_by_name()
-    return render_template("homepage.html", recipes = recipes, ingredients = ingredients)
+    return render_template("homepage.html", recipes = recipes)
 
 @app.route('/<int:recipe_id>')
 def recipe_details(recipe_id):
