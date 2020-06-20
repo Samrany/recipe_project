@@ -10,7 +10,7 @@ if __name__ == '__main__':
 def create_user(email, password, first_name, last_name):
     """Create and return a new user."""
 
-    user = User(email=email, password=password, first_name = first_name, last_name = last_name)
+    user = User(email=email.lower(), password=password, first_name = first_name.title(), last_name = last_name.title())
 
     db.session.add(user)
     db.session.commit()
@@ -18,10 +18,10 @@ def create_user(email, password, first_name, last_name):
     return user
 
 
-def add_new_ingredient(ingredient_name,dairy_free = True, gluten_free = True,
+def add_new_ingredient(ingredient_name, dairy_free = True, gluten_free = True,
                         vegetarian = True, vegan = True, paleo = True):
     """Add new ingredient to db"""
-    current_ingredient = Ingredient(ingredient_name = ingredient_name, 
+    current_ingredient = Ingredient(ingredient_name = ingredient_name.lower(), 
                         dairy_free = dairy_free, gluten_free = gluten_free,
                         vegetarian = vegetarian, vegan = vegan, paleo = paleo)
 
@@ -82,7 +82,7 @@ def create_new_recipe(recipe_name, source_name, website, directions, image, serv
     ingredients in recipes where ingredients is a list of dictionary objects."""
 
     # Add recipe to db
-    current_recipe = Recipe(recipe_name = recipe_name, source_name = source_name,
+    current_recipe = Recipe(recipe_name = recipe_name.title(), source_name = source_name.title(),
         website = website, directions = directions, image = image, servings = servings)
     db.session.add(current_recipe)
     db.session.commit()

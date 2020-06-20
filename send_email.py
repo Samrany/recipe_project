@@ -10,6 +10,9 @@ def return_html_checklist(shopping_list_dict):
 
 	html_ingredients = " "
 
+	# 'test' == ('te',
+	# 		'st')
+
 	for item in shopping_list_dict:
 		amount = shopping_list_dict[item]['amount']
 		metric = shopping_list_dict[item]['metric']

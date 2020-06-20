@@ -28,6 +28,7 @@ def homepage():
 def recipe_details(recipe_id):
 	"""Show full recipe details for a specific recipe."""
 	recipe = crud.get_recipe_by_id(recipe_id)
+	# ingredients = 
 	return render_template("recipe_details.html", recipe = recipe)
 
 @app.route('/login') 

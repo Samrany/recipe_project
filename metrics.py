@@ -15,7 +15,6 @@ def spoonacular_metric_conversion(ingredientName, sourceAmount, sourceUnit, targ
 				'targetUnit': targetUnit,
 				'apiKey': SPOONACULAR_KEY}
 
-	#TRY EXCEPT to avoid ERROR
 	try:
 		response = requests.get(url, params=payload)
 		conversion = response.json()
@@ -26,9 +25,8 @@ def spoonacular_metric_conversion(ingredientName, sourceAmount, sourceUnit, targ
 		return output_amount
 	
 	except:
+		#Technically this means the ingredient amount won't be added to the shopping list
 		return 0
-	# NEED TO HANDLE SITUATIONS WHERE OUTPUT IS NONE
-
 	
 
 
@@ -46,6 +44,16 @@ def create_shopping_list(recipes_to_cook):
 
 	shopping_list_dict = {}
 
+
+	[1,2,3,4,5]
+	lst = []
+	for i in range(5):
+		lst.append(i + 1)
+
+	lst = [i + 1 for i in range(5)]
+
+	recipe_ingredients = [fave_recipe.recipe.recipe_ingredients for fave_recipe in recipes_to_cook]
+
 	#looping over each recipe object and acessing each recipe's recipe_ingredients
 	for fave_recipe in recipes_to_cook:
 		# recipe_ingredients = fave_recipe.recipe.recipe_ingredients
@@ -58,7 +66,6 @@ def create_shopping_list(recipes_to_cook):
 			if ingredient not in shopping_list_dict:
 				#add ingredient to shopping list if not existing
 				shopping_list_dict[ingredient] = {'amount': recipe_ingredient.amount, 'metric': recipe_ingredient.metric}
-				print(f"{ingredient} added")
 
 			else:
 				# evaluate if metrics need conversion then add amounts
@@ -72,7 +79,6 @@ def create_shopping_list(recipes_to_cook):
 				
 				if check_if_same_unit(existing_metric_in_dict, current_metric_evaluated):
 					existing_amount_in_dict += current_amount_to_add		
-
 		
 				# Add amounts for ingredient where metric is same
 				else:

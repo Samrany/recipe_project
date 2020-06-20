@@ -4,16 +4,31 @@
 {% block head %}  {% endblock %}
 {% block body %} 
 
-{{recipe.recipe_name}}
-Serves: {{recipe.servings}}
+{{recipe.recipe_name}} <br>
+Serves: {{recipe.servings}} <br>
+</p>
+	Source:
+	<a href={{recipe.website}}> {{recipe.source_name}}  </a>
+
+</p>
+
+<img src="{{recipe.image}}" >
 <p></p>
+Directions:
 {{recipe.directions}}
 <p></p>
+
 <p>
-Ingredients:
-(list each ingredient and measurement)
-include:
--link to source author site, - button to like
-</p>
+	Ingredients: 
+	{% for recipe_ingredient in recipe.recipe_ingredients %}
+		<li> {{recipe_ingredient.amount}} 		
+			 {% if recipe_ingredient.metric != None %}
+			 		{{recipe_ingredient.metric}}
+			 {% endif %}
+			 {{recipe_ingredient.ingredient.ingredient_name}} 
+		</li>
+	{% endfor %}
+
+
 
 {% endblock %}
