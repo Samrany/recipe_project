@@ -32,7 +32,7 @@
 		"image":"https://www.mynewroots.org/images/milkshake.jpg",
 		"servings":"1",
 		"ingredients": [{"ingredient_name":"hemp seeds", "amount": 0.25 , "metric": "cup"}, {
-						"ingredient_name":"raw cacao pwder", "amount": 2, "metric": "tbsp"}, {
+						"ingredient_name":"raw cacao powder", "amount": 2, "metric": "tbsp"}, {
 						"ingredient_name":"avocado", "amount": 1}, {
 						"ingredient_name":"banana", "amount": 1, "preparation": "large, frozen"}, {
 						"ingredient_name":"honey", "amount": 2, "metric": " tbsp"}, {
