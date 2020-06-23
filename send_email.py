@@ -34,7 +34,6 @@ def send_email(user_email, user_name, recipes, recipe_ingredients):
 	port = 465  # For SSL
 	smtp_server = "smtp.gmail.com"
 	sender_email = "cookmoreofwhatyoulove@gmail.com"
-	# receiver_email = "shira.amrany@gmail.com"
 	receiver_email = user_email
 	password = os.environ.get("EMPASSWORD")
 	message = MIMEMultipart("alternative")

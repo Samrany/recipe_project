@@ -1,4 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
+# from SQLAlchemy import UniqueConstraint
 
 db = SQLAlchemy()
 
@@ -47,6 +48,7 @@ class Fave_recipes(db.Model):
     """Users favorite recipes."""
 
     __tablename__ = 'fave_recipes'
+    __table_args__ = (db.UniqueConstraint('user_id', 'recipe_id', name='user_fave_recipe_once'),)
 
     fave_id = db.Column(db.Integer,
                         autoincrement=True,
@@ -57,7 +59,7 @@ class Fave_recipes(db.Model):
     user = db.relationship("User")
     recipe = db.relationship("Recipe")
 
-
+ 
     def __repr__(self):
         return f'<recipe={self.recipe_id} user={self.user.email}>'
 

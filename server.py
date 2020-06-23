@@ -20,7 +20,13 @@ app.jinja_env.undefined = StrictUndefined
 @app.route('/') 
 def homepage():
     """Show the homepage."""
-    recipes = crud.all_recipes()
+
+    if 'logged_in' in session:
+    	recipes = crud.recipes_not_favorited(session['user_id'])
+    else:
+    	recipes = crud.all_recipes()
+
+ 
     return render_template("homepage.html", recipes = recipes)
 
 @app.route('/<int:recipe_id>')

@@ -160,3 +160,18 @@ def no_go(user, ingredient):
     db.session.commit()
 
     return no_go
+
+def recipes_not_favorited(user_id):
+    """Return a list of recipe objectss not in user_id's favorites"""
+
+    # fave_recipe_ids = Fave_recipes.recipe_id.query.filter_by(user_id = user_id).all() #DIDNT WORK
+    fave_recipes = Fave_recipes.query.filter_by(user_id = user_id).all()
+    fave_ids = [recipe.recipe_id for recipe in fave_recipes]
+    
+    not_faves = Recipe.query.filter(Recipe.recipe_id.notin_(fave_ids)).all()
+    # # not_faves = Recipe.query.filter_by(recipe_id != fave_recipes.recipe_id).all() # DIDNT WORK
+
+    return not_faves
+
+# Select recipe_id from recipes WHERE recipe_id NOT IN (Select recipe_id from fave_recipes where user_id = user_id);
+# left join w. where clause

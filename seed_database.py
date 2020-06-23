@@ -52,10 +52,10 @@ for n in range(1,10):
 	users_in_db.append(user)
 	
 	#create user_faves
-	for i in range(5):
-		random_recipe = choice(recipes_in_db)
-		random_user = choice(users_in_db)
-		random_ingredient = choice(ingredients_in_db)
-		crud.fave_recipe(random_user, random_recipe)
-		crud.no_go(random_user, random_ingredient)
+	# for i in range(3):
+	# 	random_recipe = choice(recipes_in_db)
+	# 	random_user = choice(users_in_db)
+	# 	random_ingredient = choice(ingredients_in_db)
+	# 	crud.fave_recipe(random_user, random_recipe)
+	# 	crud.no_go(random_user, random_ingredient)
 
