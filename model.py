@@ -13,9 +13,9 @@ class User(db.Model):
                         autoincrement=True,
                         primary_key=True)
     email = db.Column(db.String, unique=True)
-    password = db.Column(db.String)
-    first_name = db.Column(db.String)
-    last_name = db.Column(db.String)
+    password = db.Column(db.String, nullable=False)
+    first_name = db.Column(db.String, nullable=False)
+    last_name = db.Column(db.String, nullable=False)
 
     fave_recipes = db.relationship("Fave_recipes")
     user_no_goes = db.relationship("User_no_goes")
