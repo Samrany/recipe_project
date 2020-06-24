@@ -86,20 +86,47 @@ class FlaskTestsDatabase(TestCase):
 
         self.assertIn(b"When the oil starts to shimmer and the pot is hot", result.data)
 
-    # def test_faves_page(self):
-    #     """Test favorites page"""
 
-    #     result = self.client.get("/faves")
+class FlaskTestsLoggedInAndDatabase(TestCase):
+    """Flask tests that use the database."""
 
-    #     self.assertIn(b"TBD", result.data)
+    def setUp(self):
+        """Stuff to do before every test."""
+
+        # Get the Flask test client
+        self.client = app.test_client()
+        app.config['TESTING'] = True
+        app.config['SECRET_KEY'] = 'key'
+
+        # Connect to test database
+        connect_to_db(app, "postgresql:///testdb")
+
+        # Create tables and add sample data
+        db.create_all()
+        populate_example_data()
+
+        with self.client as c:
+            with c.session_transaction() as sess:
+                sess['user_id'] = 1
+                sess['name'] = "First1"
 
 
-    # def test_logout(self):
-    #     """Test logout"""
+    def tearDown(self):
+        """Do at end of every test."""
 
-    #     result = self.client.get("/log_out", follow_redirects=True)
+        db.session.remove()
+        db.drop_all()
+        db.engine.dispose()
 
-    #     self.assertIn(b"TBD", result.data)
+
+
+    def test_faves_page(self):
+        """Test favorites page"""
+
+        result = self.client.get("/faves")
+
+        self.assertIn(b"5 Ingredient Green Chile Stew", result.data)
+
 
 
     # def test_user_favorite_action(self):
@@ -108,13 +135,19 @@ class FlaskTestsDatabase(TestCase):
     #     result = self.client.post("/user_fave", data=)#NOT SURE WHAT TO DO FOR THIS ONE
 
 
-    # def test_get_shopping_list(self):
-    #     """Test shopping list feature"""
-    #     result = self.client.post("/faves/get_shopping_list", data={"num_recipes":2}, 
-    #                               follow_redirects=True)
-    #     ##ADD SESSION DATA
-    #     self.assertIn(b"TBD shopping list items", result.data)
+    def test_get_shopping_list(self):
+        """Test shopping list feature"""
+        result = self.client.post("/faves/get_shopping_list", data={"num_recipes":2}, 
+                                  follow_redirects=True)
+        
+        self.assertIn(b"Your Shopping List and recipes have been sent to your e-mail", result.data)
 
+        # def test_logout(self):
+    #     """Test logout"""
+
+    #     result = self.client.get("/log_out", follow_redirects=True)
+
+    #     self.assertIn(b"TBD", result.data)
 
 if __name__ == "__main__":
     import unittest
