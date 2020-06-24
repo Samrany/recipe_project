@@ -79,12 +79,12 @@ class FlaskTestsDatabase(TestCase):
         self.assertIn(b"Hi, Bob", result.data)
 
 
-    # def test_recipe_details(self):
-    #     """Test recipe details page"""
+    def test_recipe_details(self):
+        """Test recipe details page"""
 
-    #     result = self.client.get("/<int:recipe_id>")
+        result = self.client.get("/1")
 
-    #     self.assertIn(b"TBD", result.data)
+        self.assertIn(b"When the oil starts to shimmer and the pot is hot", result.data)
 
     # def test_faves_page(self):
     #     """Test favorites page"""
