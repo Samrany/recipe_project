@@ -142,12 +142,12 @@ class FlaskTestsLoggedInAndDatabase(TestCase):
         
         self.assertIn(b"Your Shopping List and recipes have been sent to your e-mail", result.data)
 
-        # def test_logout(self):
-    #     """Test logout"""
+    def test_logout(self):
+        """Test logout"""
 
-    #     result = self.client.get("/log_out", follow_redirects=True)
+        result = self.client.get("/log_out", follow_redirects=True)
 
-    #     self.assertIn(b"TBD", result.data)
+        self.assertIn(b"Login", result.data)
 
 if __name__ == "__main__":
     import unittest
