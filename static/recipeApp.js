@@ -29,27 +29,20 @@ filter.addEventListener("keyup", (evt) => {
 	evt.preventDefault();
 	if (evt.keyCode === 13) {
 		filter.click();
+		
+		let ingredient = console.log(filter.value);
+		
+		for (const recipe of recipe_cards){
+			let text = recipe.textContent
+			if (text.includes(ingredient))
+			// if ingredient in text:
+					// make div disappear from screen
+
+		}
+
+
 	}
 
-		let ingredient = console.log(filter.value);
-
-		// for loop over recipe_cards and search if ingredient is in text.
-		// 	if yes, remove from screen
-
-
-
-		// select all divs that don't contain string and disappear
-		// let filter.placeholder = ingredient_name;
-		// let filter.placeholder = " ";
-		// console.log(ingredient_name)
-		// console.log("event listener worked")
-		// console.log(filter)
-
-	
-	
-	// {
-	// 	return recipes with ingredient in them
-	// }
 	
 });
 
