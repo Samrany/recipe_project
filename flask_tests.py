@@ -1,9 +1,10 @@
 from unittest import TestCase
 from server import app
 from model import connect_to_db, db 
-from flask import session
+from flask import session, jsonify
 import crud
 from seed_testdb import populate_example_data
+
 
 class FlaskTestBasics(TestCase):
     """Flask tests."""
@@ -129,11 +130,13 @@ class FlaskTestsLoggedInAndDatabase(TestCase):
 
 
 
-    # def test_user_favorite_action(self):
-    #     """Test user favoriting recipe"""
+    def test_user_favorite_action(self):
+        """Test user favoriting recipe"""
 
-    #     result = self.client.post("/user_fave", data=)#NOT SURE WHAT TO DO FOR THIS ONE
-
+        result = self.client.post("/user_fave", data={"recipe_id":2})
+        output = jsonify({'status': True })
+        print(result)
+        self.assertEqual(output, result.data)
 
     def test_get_shopping_list(self):
         """Test shopping list feature"""

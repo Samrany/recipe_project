@@ -20,11 +20,36 @@ $('.recipe_card').on('click', (evt) => {
 
 
 
-	
+const filter = document.getElementById('ingredient_filter');
+const recipe_cards = document.querySelectorAll('.card');
+// ^ a list of notes
 
-		// $('#name-field').val(),
-// f"hi my name is {name}"
-//  hi my name is {name} 
-// `
-// `  ^ part of URL instead of part of body /user_fave/1. get in URL. Post in body.
+
+filter.addEventListener("keyup", (evt) => {
+	evt.preventDefault();
+	if (evt.keyCode === 13) {
+		filter.click();
+	}
+
+		let ingredient = console.log(filter.value);
+
+		// for loop over recipe_cards and search if ingredient is in text.
+		// 	if yes, remove from screen
+
+
+
+		// select all divs that don't contain string and disappear
+		// let filter.placeholder = ingredient_name;
+		// let filter.placeholder = " ";
+		// console.log(ingredient_name)
+		// console.log("event listener worked")
+		// console.log(filter)
+
+	
+	
+	// {
+	// 	return recipes with ingredient in them
+	// }
+	
+});
 
