@@ -156,6 +156,53 @@
 		
 					]
 
+	},
+
+	{
+		"recipe_name": "schug",
+		"source_name": "Alexandra's Kitchen",
+		"website": "https://alexandracooks.com/wp-content/uploads/2018/03/skhug.jpg",
+		"directions": "1. In a small skillet, toast the cumin and coriander seeds until they smell fragrant and have turned a shade darker in color. Transfer to a spice grinder or crush with a mortar and pestle. 2. Put the chilies and garlic in a food processor and pulse a few times until they are fairly fine. Add the cilantro, parsley, lemon zest, reserved toasted spiced, 1 tablespoon of lemon juice, 1/2 teaspoon kosher salt, and a few twists of black pepper. Pulse until all is finely chopped into a rough purée. With the motor running, drizzle in the olive oil. Stop the processor before the sauce is completely blended and smooth—you want some texture. Taste the sauce and adjust the seasoning with another 1/2 teaspoon salt (I always do), and pepper and lemon to taste.",
+		"image":"https://alexandracooks.com/wp-content/uploads/2020/06/schug2_alexandraskitchen-500x715.jpg",
+		"servings":"1",
+		"ingredients": [{"ingredient_name":"coriander seeds", "amount": 1, "metric": "tsp"}, {
+						"ingredient_name":"cumin seeds", "amount": 1, "metric": "tsp"}, {
+						"ingredient_name":"green chilies", "amount":0.5, "metric": "cup", "preparation": "seeded and roughly chopped"}, {
+						"ingredient_name":"garlic cloves", "amount":3, "preparation": "smashed and peeled"}, {
+						"ingredient_name":"cilantro", "amount": 2, "metric": "cups", "preparation": "lightly packed"}, {
+						"ingredient_name":"flat-leaf parsley", "amount": 2, "metric": "cups","preparation":"lightly packed"}, {
+						"ingredient_name":"lemon", "amount": 1, "preparation": "juice"}, {
+						"ingredient_name":"olive oil", "amount": 0.5, "metric": "cup"}
+			  
+		
+					]
+
+	},
+
+		{
+		"recipe_name": "ROAST CHICKEN PHO ZUCCHINI NOODLE SOUP",
+		"source_name": "White On Rice",
+		"website": "https://whiteonricecouple.com/recipes/chicken-pho-soup-zucchini-noodle/",
+		"directions": "1. Remove meat from roast chicken, set aside meat and place chicken bones in large stock pot.  2. In stock pot with chicken bones, add water, carrots, onion, ginger, anise stars, fish sauce, cinnamon and peppercorns. 3. Bring water to a boil, then reduce heat to low simmer. Cook on low simmer for about 1.5 hours. Stir occasionally and skim to remove fat deposits floating to the top of the broth. *For best flavor, make the pho broth a day ahead. *If using raw chicken, simmer the broth for 3 hours. 4. Season broth with additional salt or fish sauce to taste. Allow the broth to cool. Then strain the broth (it is easiest to remove large solids first and then strain) and return the broth to stock pot. Add the shredded chicken. Bring the broth to low simmer before serving. 5. While pho broth is initially cooking, fill another large pot with hot water. Bring to a boil and add the zucchini noodles. Quickly blanche the zucchini noodles for about 1-2 minutes, or until the noodles are nearly tender (they will cook a bit more when you serve them with the hot broth). Drain the zucchini noodles. 6. Fill bowls with zucchini noodles, top with shredded chicken, green onion and cilantro. Top with hot chicken broth and serve with sides and condiments.",
+		"image":"https://whiteonricecouple.com/recipe/images/Chicken-Pho-Noodle-Soup-Recipe-1.jpg",
+		"servings":"6",
+		"ingredients": [{"ingredient_name":"chicken", "amount": 1,  "preparation": "cooked - a 4 pound chicken (or 1.5 to 2 pounds of raw chicken legs/thighs."}, {
+						"ingredient_name":"water", "amount": 12, "metric": "cups"}, {
+						"ingredient_name":"carrots", "amount": 2, "preparation": "medium, cut into quarters"}, {
+						"ingredient_name":"onion", "amount": 0.5, "preparation": "peeled and charred over open flame if possible for optimal flavor"}, {
+						"ingredient_name":"ginger", "amount": 1, "metric": "knob", "preparation":"2 inch"}, {
+						"ingredient_name":"star anise", "amount":4}, {
+						"ingredient_name":"fish sauce", "amount": 2, "metric": "tbsp"}, {
+						"ingredient_name":"cinnamon stick", "amount":1, "metric": " "}, {
+						"ingredient_name":"peppercorns", "amount":0.5 , "metric": "tsp"}, {
+						"ingredient_name":"whole cloves", "amount": 0.25, "metric": "tsp"},{
+						"ingredient_name":"zucchini", "amount": 1, "metric": "lb", "preparation": "cut into noodle strands"	
+
+						} 
+			  
+		
+					]
+
 	}
 
 ]
