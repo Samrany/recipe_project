@@ -46,7 +46,7 @@
 	{
 		"recipe_name": "sausage and bell pepper skillet",
 		"source_name": "The Defined Dish",
-		"website": " https://thedefineddish.com/sausage-and-bell-pepper-skillet/ ",
+		"website": "https://thedefineddish.com/sausage-and-bell-pepper-skillet/ ",
 		"directions": "Heat oil in a large skillet over medium-high heat.Add the cut sausages to the skillet and brown on both sides, 2-3 minutes per side. Transfer brown sausages to a plate and set aside. Add the sliced bell peppers and onions to the skillet with some salt and pepper and cook, stirring, until tender, 4 to 6 minutes. Pour in the marinara and stir to combine. Nestle the sausages into the sauce and let simmer to reheat the sausages, about 3 more minutes. Serve over a bed of arugula, enjoy!",
 		"image":"https://thedefineddish.com/wp-content/uploads/2019/09/2019-08-26-06.56.50-768x1152.jpg",
 		"servings":"2",
@@ -54,7 +54,6 @@
 						"ingredient_name":"Italian Sausage", "amount": 1, "metric": "lb", "prepartion": "cut into 2 inch pieces"}, { 
 					    "ingredient_name":"bell peppers", "amount": 2, "preparation": "seeded and sliced thin"}, {
 					    "ingredient_name":"yellow onion", "amount": 0.5}, {
-					    "ingredient_name": "salt", "preparation": "to taste"},{
 					    "ingredient_name":"store bought marinara", "amount": 1, "metric": "cup"}, {					    	
 					    "ingredient_name":"baby arugula", "amount": 2, "metric": "cups"}
 					    
@@ -63,11 +62,75 @@
 					    
 
 
+	},
+
+
+
+	{
+		"recipe_name": "Grain-Free Apple Cinnamon Breakfast Porridge",
+		"source_name": "Dr. Hyman",
+		"website": "https://drhyman.com/blog/2018/05/24/grain-free-apple-cinnamon-breakfast-porridge/",
+		"directions": "1. Combine all ingredients in blender and \n blend until smooth. 2. Transfer the mixture to a small saucepan and heat over medium-low, about 3-5 minutes, until the mixture begins to thicken. 3.Top with optional chopped nuts and cinnamon, serve warm, and enjoy!",
+		"image":"https://drhyman.com/wp-content/uploads/2018/05/Apple-Cinnamon-Porridge-Kelsey-Ale-1.jpg",
+		"servings":"1",
+		"ingredients": [{"ingredient_name":"flax meal", "amount": 2, "metric": "tbsp"}, {
+						"ingredient_name":"coconut milk", "amount": 0.5, "metric": "cup"}, {
+						"ingredient_name":"green apple", "amount":0.5, "preparation": "peeled, cored, and diced"}, {
+						"ingredient_name":"collagen protein powder", "amount":1, "metric": "scoop"}, {
+						"ingredient_name":"almond butter", "amount":2 , "metric": "tbsp"}, {
+						"ingredient_name":"cinnamon", "amount": 0.5, "metric": "tsp"}, {
+						"ingredient_name":"vanilla extract", "amount": 0.25 , "metric": "teaspoon"}, {
+						"ingredient_name":"Chopped nuts and cinnamon", "amount":1, "preparation": "for garnish"} 
+			  
+		
+					]
+
+	},
+
+
+
+	{
+		"recipe_name": "Creamy Fennel Kale Chicken Salad",
+		"source_name": "Dr. Hyman",
+		"website": "https://drhyman.com/blog/2018/05/31/creamy-fennel-kale-chicken-salad/",
+		"directions": "1. Preheat oven to 400° F. 2. On a baking sheet, place prepared fennel and leeks. 3.Toss vegetables with 2 tablespoons avocado oil, Himalayan salt, and dash of black pepper. 4. In a separate bowl, massage kale with 1 tablespoon avocado oil, dash of salt and pepper, and set the kale aside.5. Bake fennel and leeks for 40 minutes and add kale to the baking sheet for the last 10-12 minutes of baking.6. Heat 1 tablespoon avocado oil in a large pan, over medium heat. Add chicken and sauté until lightly cooked, about 3-4 minutes per side.7. In a small bowl, mix almond yogurt, chicken broth, and mustard and pour on top of chicken.8. Add the roasted vegetables to pan and continue to heat for 3 minutes, then enjoy!",
+		"image":"https://drhyman.com/wp-content/uploads/2018/05/Grilled-Chicken-1.jpg",
+		"servings":"4",
+		"ingredients": [{"ingredient_name":"leeks", "amount": 2, "preparation": "thinly sliced"}, {
+						"ingredient_name":"fennel bulbs", "amount": 2, "preparation": "cored and thinly sliced"}, {
+						"ingredient_name":"avocado oil", "amount":0.25, "metric": "cup"}, {
+						"ingredient_name":"curly kale", "amount": 5 , "metric": "cups", "preparation": "chopped"}, {
+						"ingredient_name":"chicken breast cutlets, skinless", "amount":1, "metric": "lb"}, {
+						"ingredient_name":"chicken broth", "amount":0.5 , "metric": "cup"}, {
+						"ingredient_name":"almond yogurt, unsweetened", "amount": 0.25, "metric": "cup"}, {
+						"ingredient_name":"whole grain mustard", "amount": 1, "metric": "tbsp"}			  
+		
+					]
+
+	},
+	{
+		"recipe_name": "Almond Flour Pancakes",
+		"source_name": "Sweet Potato Soul",
+		"website": "https://sweetpotatosoul.com/2017/06/gluten-free-vegan-breakfast-recipes-video.html",
+		"directions": "1. In a large mixing bowl combine the almond flour, teff flour, baking powder, baking soda, cinnamon, salt, and coconut sugar. Stir well to combine. 2. Then in another bowl combine ground flax seed meal with water to make a flax egg. Let it sit for about 5 minutes to thicken. 2. Add banana to the flax mix, and mash well. 3. Then pour in non-dairy milk, and vanilla extract, and stir. 4. Pour the wet into the dry, and use a whisk to mix well. 5. Warm and grease a skillet on medium heat, then pour in your pancake batter. Cook pancakes on each side for about 3 minutes. Be very careful flipping these, because they don’t have gluten they are more fragile. 6. Complete with the remaining batter. 7. Serve topped with sliced banana, blackberries, walnuts, cacao nibs, and maple syrup.",
+		"image":"https://sweetpotatosoul.com/wp-content/uploads/2017/06/Gluten-free-vegan-almond-flour-pancakes-600px.jpg",
+		"servings":"2",
+		"ingredients": [{"ingredient_name":"almond flour", "amount": 1 , "metric": "cup"}, {
+						"ingredient_name":"teff flour", "amount":0.5, "metric": "cup"}, {
+						"ingredient_name":"coconut sugar", "amount": 1, "metric": "tbsp"}, {
+						"ingredient_name":"cinnamon", "amount": 1, "metric": "tsp"}, {
+						"ingredient_name":"baking powder", "amount":1 , "metric": "tsp"}, {
+						"ingredient_name":"baking soda", "amount":0.25 , "metric": "tsp"}, {
+						"ingredient_name":"salt", "amount": 0.125, "metric": "tsp"}, {
+						"ingredient_name":"flax seed meal", "amount":1 , "metric": "tbsp", "preparation": "add 2 tbsp water"}, {
+						"ingredient_name":"banana", "amount":1, "preparation": "ripe"}, {
+			  			"ingredient_name":"vanilla extract", "amount":1 , "metric": "tsp"}, { 
+			  			"ingredient_name":"soy milk", "amount": 1, "metric": "cup"}
+
+		
+					]
+
 	}
+
+
 ]
-
-
-
-
-
-

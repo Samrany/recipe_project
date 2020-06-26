@@ -134,9 +134,9 @@ class FlaskTestsLoggedInAndDatabase(TestCase):
         """Test user favoriting recipe"""
 
         result = self.client.post("/user_fave", data={"recipe_id":2})
-        output = jsonify({'status': True })
+        # output = jsonify({'status': True })
         print(result)
-        self.assertEqual(output, result.data)
+        self.assertIn(b'{"status":true}', result.data)
 
     def test_get_shopping_list(self):
         """Test shopping list feature"""

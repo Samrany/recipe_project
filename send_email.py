@@ -7,7 +7,7 @@ import os
 def return_html_checklist(shopping_list_dict):
 	"""Takes a dictionary of ingredients with dictionary value containing "amount" and "metric"
 	and returns html checklist items"""
-
+	
 	html_ingredients = " "
 
 	# 'test' == ('te',
