@@ -54,7 +54,7 @@
 						"ingredient_name":"Italian Sausage", "amount": 1, "metric": "lb", "prepartion": "cut into 2 inch pieces"}, { 
 					    "ingredient_name":"bell peppers", "amount": 2, "preparation": "seeded and sliced thin"}, {
 					    "ingredient_name":"yellow onion", "amount": 0.5}, {
-					    "ingredient_name":"store bought marinara", "amount": 1, "metric": "cup"}, {					    	
+					    "ingredient_name":"marinara sauce", "amount": 1, "metric": "cup"}, {					    	
 					    "ingredient_name":"baby arugula", "amount": 2, "metric": "cups"}
 					    
 						
@@ -130,7 +130,35 @@
 		
 					]
 
+	},
+
+	{
+		"recipe_name": "One Bowl Pumpkin Chocolate Muffins",
+		"source_name": "Oh She Glows",
+		"website": "https://ohsheglows.com/2018/10/17/one-bowl-pumpkin-chocolate-muffins-vegan-gluten-free/",
+		"directions": "1. Preheat the oven to 350°F (180°C) and line a muffin tin with 12 paper liners. 2. Add the rolled oats to a high-speed blender and blend on high until a fine flour forms. Set aside. 3. In a large mixing bowl, whisk together the ground chia seed and water until combined. Set aside for a few minutes to thicken. 4. To the same bowl, add the rest of the wet ingredients (pumpkin, oil, sugar, maple syrup, and vanilla) and stir until smooth. 5. Add the dry ingredients (oat flour, cocoa powder, pumpkin pie spice, baking powder, baking soda, and salt) to the bowl with the wet ingredients. Whisk until smooth (I love using my big whisk for this task!). 6. Set aside 1/4 cup (45 g) of chocolate chips (if using) for the topping and stir the remaining chips into the batter. 7. Spoon the batter into the paper liners, filling each two-thirds full. Press the remaining chocolate chips into the tops of each muffin. 8. Bake the muffins for 20 to 25 minutes (I bake for 22), until a toothpick inserted into the middle comes out clean. 9. Place the muffin tin on a cooling rack for 10 minutes. Carefully remove each muffin and place it directly onto the cooling rack until fully cooled. Leftover muffins can be stored in the fridge in an airtight container for several days or frozen for up to 1 month.",
+		"image":"https://ohsheglows.com/wp-content/uploads/2018/10/one-bowl-pumpkin-chocolate-muffins_retouched-683x1024.jpg",
+		"servings":"12",
+		"ingredients": [{"ingredient_name":"chia seeds", "amount":2, "metric": "tsp", "prepartion": "ground"}, {
+						"ingredient_name":"unsweetened pumpkin purée", "amount": 1, "metric": "cup"}, {
+						"ingredient_name":"coconut oil", "amount": 0.25, "metric": "cup", "prepartion": "melted"}, {
+						"ingredient_name":"coconut sugar", "amount": 0.5, "metric": "cup"}, {
+						"ingredient_name":"maple syrup", "amount": 1, "metric": "tsp"}, {
+						"ingredient_name":"rolled oats", "amount": 1.5, "metric": "cups", "preparation": "blended into a fine flour"}, {
+						"ingredient_name":"cocoa powder", "amount": 0.5 , "metric": "cup"}, {
+						"ingredient_name":"pumpkin pie spice", "amount": 2, "metric": "tsp"}, {
+						"ingredient_name":"baking powder", "amount": 1, "metric": "tsp"}, {
+						"ingredient_name":"baking soda", "amount": 0.5, "metric": "tsp"}, { 
+						"ingredient_name":"fine sea salt", "amount":0.5, "metric": "tsp"}, { 
+						"ingredient_name":"non-dairy chocolate chips", "amount": 0.666, "metric": "cup"	
+						}
+			  
+		
+					]
+
 	}
 
-
 ]
+
+
+
