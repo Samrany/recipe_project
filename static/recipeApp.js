@@ -39,8 +39,11 @@ filter_input.addEventListener("keyup", (evt) => {
 				console.log(recipe);
 				console.log(recipe.textContent);
 				if (recipe.textContent.includes(ingredient)) {		
-					recipe.hidden = true;
-				}
+					recipe.hidden = false;
+			    }
+			    else {
+			   	 	recipe.hidden = true;
+			    }
 				
 				
 			}
