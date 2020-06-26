@@ -32,9 +32,15 @@ favorite.recipe (show recipe_card for each)
 	{% for favorite in favorites %}
 	<div> <a href="/{{favorite.recipe.recipe_id}}"> {{favorite.recipe.recipe_name}} </a>
 		  Source: {{favorite.recipe.source_name}}
-		  <img src = "{{favorite.recipe.image}}" >  
+		  <img src = "{{favorite.recipe.image}}"><br>
+
+		  <button type="button" class="btn btn-outline-primary unlike_it" name={{favorite.recipe.recipe_id}}> 
+		  	&#9829; </button>
+
+
+		  
 		  Ingredients: 
-		   {% for each in favorite.recipe.recipe_ingredients %}
+		  {% for each in favorite.recipe.recipe_ingredients %}
 		  {{each.ingredient.ingredient_name}} /   
 		  {% endfor %}
 

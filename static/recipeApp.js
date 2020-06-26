@@ -1,12 +1,13 @@
 "use strict";
 
 
-$('.recipe_card').on('click', (evt) => {
+// Add recipe to favorites from homepage
+$('.like_btn').on('click', (evt) => {
 	evt.preventDefault();
 
 	let recipe_id = evt.currentTarget.name
 	
-	// console.log(evt)
+	console.log(evt)
 	// console.log(evt.currentTarget.name)
 	// console.log(evt.currentTarget.innerHTML)
 		
@@ -14,12 +15,27 @@ $('.recipe_card').on('click', (evt) => {
 		
 		// if response at status = ok then:
 		evt.currentTarget.innerHTML = "Liked!"
-		// otherwise print "You've already liked this one"
 	});
 });
 
 
+// Unfavorite recipes from favorites page
+$('.unlike_it').on('click', (evt) => {
+	evt.preventDefault();
+	alert("I was clicked")
 
+	console.log(evt)
+	let recipe_id = evt.currentTarget.name;
+
+	$.post('/user_unfave', {'recipe_id':recipe_id}, (response) =>{
+		evt.currentTarget.innerHTML = '&#9825'		
+	});
+
+});
+
+
+
+// Filter recipes by ingredient on homepage
 const filter_input = document.getElementById('ingredient_filter');
 // const recipe_cards = document.querySelectorAll('.card');
 
@@ -51,22 +67,3 @@ filter_input.addEventListener("keyup", (evt) => {
 
 	}
 });
-		// $('.card')
-
-
-
-
-
-		// let filtered_recipes = recipe_cards.filter(each_card => each_card.textContent == ingredient); 
-		// console.log(filtered_recipes)
-
-		// (task){
-			// return recipe_cards.textContent == ingredient;
-		// });
-
-			// if (text.includes(ingredient))
-			// if ingredient in text:
-					// make div disappear from screen
-
-
-

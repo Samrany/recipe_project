@@ -131,7 +131,15 @@ def user_fave():
 	# on homepage that user can like by showing those that aren't in user favorites yet)
 	crud.fave_recipe(user_id, recipe_id)
 	print("RETURNING TRUE")
-	return jsonify({'status': True })
+	return jsonify({'status': True})
+
+
+@app.route('/user_unfave', methods = ['POST'])
+def user_unfave():
+	"""Allow user to unfave recipes from their favorites page"""
+
+	crud.unfave_recipe(user_id, recipe_id)
+	return jsonify({'status': True})
 
 
 @app.route('/faves/get_shopping_list', methods = ['POST', 'GET'])

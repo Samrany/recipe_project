@@ -152,6 +152,12 @@ def fave_recipe(user_id, recipe_id):
 
     return fave_recipe
 
+def unfave_recipe(user_id, recipe_id):
+    """Delete a recipe from user's favorites"""
+    recipe = Fave_recipes.query.filter_by(user_id = user_id, recipe_id = recipe_id).first()
+    db.session.delete(recipe)
+    db.session.commit()
+
 def no_go(user, ingredient):
     """Save a favorite recipe to the db"""
     no_go = User_no_goes(user_id = user.user_id, ingredient_id = ingredient.ingredient_id)
