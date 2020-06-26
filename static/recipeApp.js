@@ -20,29 +20,50 @@ $('.recipe_card').on('click', (evt) => {
 
 
 
-const filter = document.getElementById('ingredient_filter');
-const recipe_cards = document.querySelectorAll('.card');
-// ^ a list of notes
+const filter_input = document.getElementById('ingredient_filter');
+// const recipe_cards = document.querySelectorAll('.card');
 
 
-filter.addEventListener("keyup", (evt) => {
+
+filter_input.addEventListener("keyup", (evt) => {
 	evt.preventDefault();
 	if (evt.keyCode === 13) {
-		filter.click();
-		
-		let ingredient = console.log(filter.value);
-		
-		for (const recipe of recipe_cards){
-			let text = recipe.textContent
-			if (text.includes(ingredient))
-			// if ingredient in text:
-					// make div disappear from screen
+		filter_input.click();
 
-		}
+
+
+		let recipe_cards = $('.card').get()
+			let ingredient = filter_input.value;
+			
+			for (const recipe of recipe_cards){
+				console.log(recipe);
+				console.log(recipe.textContent);
+				if (recipe.textContent.includes(ingredient)) {		
+					recipe.hidden = true;
+				}
+				
+				
+			}
 
 
 	}
-
-	
 });
+		// $('.card')
+
+
+
+
+
+		// let filtered_recipes = recipe_cards.filter(each_card => each_card.textContent == ingredient); 
+		// console.log(filtered_recipes)
+
+		// (task){
+			// return recipe_cards.textContent == ingredient;
+		// });
+
+			// if (text.includes(ingredient))
+			// if ingredient in text:
+					// make div disappear from screen
+
+
 

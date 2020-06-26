@@ -44,18 +44,23 @@
 
 	},
 	{
-		"recipe_name": "Shira's chocolate pork",
-		"source_name": " Shira's head",
-		"website": " www.shira.com ",
-		"directions": "Take the pork, smother it with butter, raw cacao, and garlic, roast in the oven at 425 degrees for 30 min.",
-		"image":" ",
-		"servings":"4 ",
-		"ingredients": [{"ingredient_name":"raw cacao powder", "amount": 0.5, "metric": "cup"}, {
-						"ingredient_name":"pork roast", "amount": 10, "metric": "oz"}, { 
-					    "ingredient_name":"garlic cloves", "amount": 4, "preparation": "minced"}, {
-					    "ingredient_name":"butter", "amount": 0.25, "metric": "stick"
-						}
+		"recipe_name": "sausage and bell pepper skillet",
+		"source_name": "The Defined Dish",
+		"website": " https://thedefineddish.com/sausage-and-bell-pepper-skillet/ ",
+		"directions": "Heat oil in a large skillet over medium-high heat.Add the cut sausages to the skillet and brown on both sides, 2-3 minutes per side. Transfer brown sausages to a plate and set aside. Add the sliced bell peppers and onions to the skillet with some salt and pepper and cook, stirring, until tender, 4 to 6 minutes. Pour in the marinara and stir to combine. Nestle the sausages into the sauce and let simmer to reheat the sausages, about 3 more minutes. Serve over a bed of arugula, enjoy!",
+		"image":"https://thedefineddish.com/wp-content/uploads/2019/09/2019-08-26-06.56.50-768x1152.jpg",
+		"servings":"2",
+		"ingredients": [{"ingredient_name":"olive oil", "amount": 2, "metric": "tbsp"}, {
+						"ingredient_name":"Italian Sausage", "amount": 1, "metric": "lb", "prepartion": "cut into 2 inch pieces"}, { 
+					    "ingredient_name":"bell peppers", "amount": 2, "preparation": "seeded and sliced thin"}, {
+					    "ingredient_name":"yellow onion", "amount": 0.5}, {
+					    "ingredient_name": "salt", "preparation": "to taste"},{
+					    "ingredient_name":"store bought marinara", "amount": 1, "metric": "cup"}, {					    	
+					    "ingredient_name":"baby arugula", "amount": 2, "metric": "cups"}
+					    
+						
 					   ]
+					    
 
 
 	}
