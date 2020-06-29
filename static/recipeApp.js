@@ -20,9 +20,8 @@ $('.like_btn').on('click', (evt) => {
 
 
 // Unfavorite recipes from favorites page
-$('.unlike_it').on('click', (evt) => {
+$('.unlike_btn').on('click', (evt) => {
 	evt.preventDefault();
-	alert("I was clicked")
 
 	console.log(evt)
 	let recipe_id = evt.currentTarget.name;
@@ -33,13 +32,17 @@ $('.unlike_it').on('click', (evt) => {
 
 });
 
+// let unlike_btn = document.getElementbyClassName('unlike_btn');
+
+// unlike_btn.addEventListener("click", (evt) => {
+// 	evt.preventDefault();
+// 	console.log(evt);
+// });
 
 
 // Filter recipes by ingredient on homepage
 const filter_input = document.getElementById('ingredient_filter');
 // const recipe_cards = document.querySelectorAll('.card');
-
-
 
 filter_input.addEventListener("keyup", (evt) => {
 	evt.preventDefault();
@@ -57,8 +60,9 @@ filter_input.addEventListener("keyup", (evt) => {
 				if (recipe.textContent.includes(ingredient)) {		
 					recipe.hidden = false;
 			    }
+
 			    else {
-			   	 	recipe.hidden = true;
+			   	 	recipe.parentNode.classList.add("hidden_class");
 			    }
 				
 				

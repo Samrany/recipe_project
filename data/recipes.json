@@ -203,6 +203,50 @@
 		
 					]
 
+
+	},
+	{
+		"recipe_name": "roasted cabbage with walnuts and parmesan",
+		"source_name": "Smitten Kitchen",
+		"website": "https://smittenkitchen.com/2019/11/roasted-cabbage-with-walnuts-and-parmesan/",
+		"directions": "Heat oven to 475ºF. Remove any damaged outer leaves of cabbage and cut it 8 (for small ones) to 12 (for a large one) wedges. Coat a large baking sheet with 2 tablespoons olive oil. Arrange cabbage wedges in one layer, drizzling or brushing them with 2 more tablespoons olive oil and sprinkle with 1 teaspoon kosher salt and freshly ground black pepper to taste. Roast for 8 to 10 minutes, until charred underneath (don’t panic if you see a few thin black edges; they’re going to taste amazing). Use a spatula to flip each piece over and roast for 5 more minutes, until the edges of the cabbage are dark brown. Meanwhile, while cabbage roasts, place nuts on a smaller tray or baking dish and roast them next to the cabbage for 4 to 5 minutes. Remove and scatter them, still hot, onto a cutting board and coarsely chop them. Scoop into a bowl and finely grate the zest of half a lemon and all of the garlic over it. Add remaning 3 tablespoons olive oil to walnuts, a few pinches of salt and red pepper flakes and stir to combine. If you’ve got a couple minutes to let it all infuse as it cools, let it rest. When ready, squeeze the juice of half your lemon in and stir to combine. Adjust flavors to taste, adding more lemon if needed; you want this dressing to be robust. The moment the cabbage comes out of the oven, spoon the walnut dressing over the wedges. Grate parmesan all over, to taste. Serve immediately, while piping hot. There will be no leftovers.",
+		"image":"https://i1.wp.com/smittenkitchen.com/wp-content/uploads//2019/11/roasted-cabbage-with-walnuts-and-parmesan.jpg?fit=750%2C500&ssl=1",
+		"servings":"3",
+		"ingredients": [{"ingredient_name":"savoy cabbage", "amount": 1}, {
+						"ingredient_name":"olive oil", "amount": 7, "metric": "tbsp"}, {
+						"ingredient_name":"walnut halves", "amount": 0.5}, {
+						"ingredient_name":"garlic cloves", "amount":1 }, {
+						"ingredient_name":"lemon", "amount":1 }, {
+						"ingredient_name":"parmesan", "amount": 1, "preparation": "grated to taste"
+						}
+			  
+		
+					]
+
+	},
+	{
+		"recipe_name": "Sheet Pan Nachos",
+		"source_name": "Love & Lemons",
+		"website": "https://www.loveandlemons.com/pico-de-gallo/",
+		"directions": "Assemble the tortilla chips on a platter. Drizzle with the cheese sauce, taco “meat”, tomato, scallions, serrano, avocado, radishes, and pickled onions. Sprinkle with cilantro and serve with lime wedges, for squeezing.",
+		"image":"https://cdn.loveandlemons.com/wp-content/uploads/2020/01/nachos-recipe.jpg",
+		"servings":"4",
+		"ingredients": [{"ingredient_name":"Tortilla Chips", "amount":1 , "metric": "bag"}, {
+						"ingredient_name":"Vegan Cheese", "amount": 1, "metric": "cup"}, {
+						"ingredient_name":"taco meat", "amount": 1, "metric": "cup"}, {
+						"ingredient_name":"tomatoes", "amount": 3, "preparation": "diced"}, {
+						"ingredient_name":"white onion", "amount": 0.75, "metric": "cup", "preparation":"diced"}, {
+						"ingredient_name":"garlic cloves", "amount": 2, "preparation": "minced"}, {
+						"ingredient_name":"jalapeño", "amount": 1, "preparation": "stemmed and diced"}, {
+						"ingredient_name":"scallions", "amount": 2, "metric": "tbsp", "preparation": "chopped"}, {
+						"ingredient_name":"avocado", "amount": 1, "preparation": "sliced"}, {
+						"ingredient_name":"pickled onions", "amount": 0.25, "metric": "cup"}, {
+						"ingredient_name":"cilantro", "amount": 0.75, "metric": "cup"}, {
+						"ingredient_name":"lime", "amount":2 } 
+			  
+		
+					]
+
 	}
 
 ]
