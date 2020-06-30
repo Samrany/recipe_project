@@ -6,18 +6,18 @@
 <!-- If user logged in say hello and show link to user faves, otherwise show login link
 -->
 <div class="top">
-	<div class="title"> <p> Fresh & Whole </p> </div>
+	<div class="title">  Fresh & Whole </div>
 </div>
 
 
 	<nav class="navbar sticky-top navbar-light navbar-expand-lg top">
-	  <a class="navbar-brand" href="#"></a>
+<!-- 	  <a class="navbar-brand" href="#"></a> -->
 
 
 		{% if 'logged_in' in session %}
-			<div class="nav-link"> Hi, {{session['name']}} </div>
-			<div class="nav-link"><a href = "/faves"> My Favorites</a></div>
-			<div class="nav-link"><a href = "/log_out"> Logout </a></div>		
+			<li class="nav-link"> Hi, {{session['name']}} </li>
+			<li class="nav-link"><a href = "/faves"> My Favorites</a></li>
+			<li class="nav-link"><a href = "/log_out"> Logout </a></li>		
 		{% else %}
 	<!-- 	  <li class="nav-item">
 	        <a class="nav-link" href="/login"> Login </a>
