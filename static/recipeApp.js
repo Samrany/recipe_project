@@ -1,5 +1,7 @@
 "use strict";
 
+$(document).ready(function() {
+
 
 // Add recipe to favorites from homepage
 $('.like_btn').on('click', (evt) => {
@@ -44,7 +46,7 @@ $('.unlike_btn').on('click', (evt) => {
 const filter_input = document.getElementById('ingredient_filter');
 // const recipe_cards = document.querySelectorAll('.card');
 
-filter_input.addEventListener("keyup", (evt) => {
+filter_input&&filter_input.addEventListener("keyup", (evt) => {
 	evt.preventDefault();
 	if (evt.keyCode === 13) {
 		filter_input.click();
@@ -58,16 +60,15 @@ filter_input.addEventListener("keyup", (evt) => {
 				console.log(recipe);
 				console.log(recipe.textContent);
 				if (recipe.textContent.includes(ingredient)) {		
-					recipe.hidden = false;
+					$(recipe.parentNode).removeClass("hidden_class");
 			    }
 
 			    else {
-			   	 	recipe.parentNode.classList.add("hidden_class");
+			   	 	$(recipe).parent().addClass("hidden_class");
 			    }
-				
-				
+			
 			}
-
-
 	}
+});
+
 });

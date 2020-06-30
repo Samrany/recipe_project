@@ -137,8 +137,12 @@ def user_fave():
 @app.route('/user_unfave', methods = ['POST'])
 def user_unfave():
 	"""Allow user to unfave recipes from their favorites page"""
+	
+	recipe_id = request.form.get('recipe_id') 
+	user_id = session['user_id']
 
 	crud.unfave_recipe(user_id, recipe_id)
+
 	return jsonify({'status': True})
 
 

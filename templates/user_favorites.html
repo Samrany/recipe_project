@@ -30,7 +30,8 @@ favorite.recipe (show recipe_card for each)
  -->
 <div class="row row-cols-1 row-cols-md-3">
 	{% for favorite in favorites %}
-
+	<div class="col mb-4">
+		<div class="card" style="width: 18rem;">
 		<a href="/{{favorite.recipe.recipe_id}}"> {{favorite.recipe.recipe_name}} </a>
 		  Source: {{favorite.recipe.source_name}}
 		  <img src = "{{favorite.recipe.image}}"><br>
