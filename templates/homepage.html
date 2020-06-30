@@ -7,6 +7,7 @@
 -->
 <div class="top">
 	<div class="title">  Fresh & Whole </div>
+<!-- 	<div> Curated </div> -->
 </div>
 
 
@@ -15,14 +16,17 @@
 
 
 		{% if 'logged_in' in session %}
-			<li class="nav-link"> Hi, {{session['name']}} </li>
-			<li class="nav-link"><a href = "/faves"> My Favorites</a></li>
-			<li class="nav-link"><a href = "/log_out"> Logout </a></li>		
+
+			
+			<div> <input type="text" placeholder="Search by Ingredient..." id="ingredient_filter"> </div>
+
+			<div class="nav-link ml-auto"> Hi, {{session['name']}} </div>
+			<div class="nav-link"><a href = "/faves"> My Favorites</a></div>
+			<div class="nav-link"><a href = "/log_out"> Logout </a></div>	
+
 		{% else %}
-	<!-- 	  <li class="nav-item">
-	        <a class="nav-link" href="/login"> Login </a>
-	      </li> -->
-			<div class="nav-link"> <a href = "/login" > Login </a></div>
+
+			<div class="nav-link ml-auto"> <a href = "/login" > Login </a></div>
 			<div> or </div>
 			<div class="nav-link"><a href = "/create_login"> Create Account </a> </div>
 		{% endif %}
@@ -36,10 +40,10 @@
 
 <h2> Explore New Recipes </h2>
 
-<p></p>
+<!-- <p></p>
 <div> <input type="text" placeholder="Search by Ingredient..." id="ingredient_filter"> </div>
 <p></p>
-
+ -->
 <!-- for each recipe in db create a recipe card  
 Each recipe card link to page with all recipe details
 User can favorite recipe cards
@@ -47,7 +51,7 @@ User can favorite recipe cards
 
 
 <!--  <div class="card-deck"> -->
-<div class="row row-cols-1 row-cols-md-3">
+<div class="row row-cols-1 row-cols-md-3 card-container">
 	{% for recipe in recipes %}
 		<div class="col mb-4">
 			<div class="card">
@@ -72,9 +76,9 @@ User can favorite recipe cards
 				    </button>
 			    {% endif %}
 			  
-			  </div>
+			   </div>
 			</div>
-	</div>
+		</div>
 		
 	{% endfor %}
 </div>
