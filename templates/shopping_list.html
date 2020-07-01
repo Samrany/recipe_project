@@ -1,34 +1,44 @@
 {% extends 'base.html' %}
 
 {% block title %} Your Shopping List {% endblock %}
-{% block head %}  {% endblock %}
+{% block head %} 
+
+<div class="top">
+	<div class="title">  Fresh & Whole </div>
+<!-- 	<div> Curated </div> -->
+</div> 
+
+{% endblock %}
+
 {% block body %} 
-<h2> Your Shopping List and recipes have been sent to your e-mail! </h2>
+<!-- justify-content-center -->
+<div class="row d-flex shopping-list justify-content-center">
+<h2 clas="form-header"> {{session['name']}}, your Shopping List and recipes have been sent to your e-mail! </h2>
 
-<div>
+	<div class="col-md-6 shopping-container">
+	<h3 class="sub-head"> Recipe Links:</h3>
+		{% for recipe in recipes_to_cook %}
+		<li> <a href="/{{recipe.recipe_id}}"> {{recipe.recipe.recipe_name}} </a></li>
+		{% endfor %}
 
-	Recipe Links:
-	{% for recipe in recipes_to_cook %}
-	<li> <a href="/{{recipe.recipe_id}}"> {{recipe.recipe.recipe_name}} </a></li>
-	{% endfor %}
+		<p></p>
 
-	<p></p>
-	Ingredients: 
-	<form action='/faves/get_shopping_list' method="GET">
+	<h3 class="sub-head"> Shopping List:</h3>
+		<form action='/faves/get_shopping_list' method="GET">
 
-		  {% for item in shopping_list_dict %}
+			  {% for item in shopping_list_dict %}
 
-		  <input type="checkbox" name="ingredient">
-		  <label> {{item.ingredient_name}} {{shopping_list_dict[item]['amount']}} 
-		  				{% if shopping_list_dict[item]['metric'] != None %}
-		  				{{shopping_list_dict[item]['metric']}}
-		  				{% endif %}
-		  </label> </br>
+			  <input type="checkbox" name="ingredient">
+			  <label class="ingredient"> {{item.ingredient_name}} {{shopping_list_dict[item]['amount']}} 
+			  				{% if shopping_list_dict[item]['metric'] != None %}
+			  				{{shopping_list_dict[item]['metric']}}
+			  				{% endif %}
+			  </label> </br>
 
-		  {% endfor %}
-
-
-	</form>
+			  {% endfor %}
 
 
+		</form>
+	</div>
+</div>
 {% endblock %}

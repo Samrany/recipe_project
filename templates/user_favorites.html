@@ -1,12 +1,27 @@
 {% extends 'base.html' %}
 
 {% block title %} My Favorites {% endblock %}
-{% block head %}  {% endblock %}
+{% block head %}
+
+<!-- <div class="top">
+	<div class="title">  Fresh & Whole </div> -->
+<!-- 	<div> Curated </div> -->
+<!-- </div> -->
+
+
+	<nav class="navbar sticky-top navbar-light navbar-expand-lg top">
+<!-- 	  <a class="navbar-brand" href="#"></a> -->
+
+
+<!-- 			<div class="nav-link ml-auto"> {{name}}'s favorites </div> -->
+			<div class="nav-link ml-auto"><a href = "/"> Home</a></div>
+			<div class="nav-link"><a href = "/log_out"> Logout </a></div>	
+
+	</nav>
+
+
+{% endblock %}
 {% block body %}
-
-
-<div><a href = "/"> Home </a></div>
-<div><a href = "/log_out"> Logout </a></div>		
 
 
 
@@ -28,7 +43,36 @@
 <!-- for favorite in favorites:
 favorite.recipe (show recipe_card for each)
  -->
-<div class="row row-cols-1 row-cols-md-3">
+
+<div class="row row-cols-1 row-cols-md-3 card-container">
+	{% for favorite in favorites %}
+		<div class="col mb-4">
+			<div class="card">
+			  <a href="/{{favorite.recipe.recipe_id}}">
+			  <img src="{{favorite.recipe.image}}" class="card-img-top" >
+			  </a>
+			  <div class="card-body" >
+			    <h5 class="card-title"> {{favorite.recipe.recipe_name}} </h5>
+			    <h6 class="card-subtitle mb-2 text-muted">Source: {{favorite.recipe.source_name}}</h6>
+
+			    <p class="card-text">
+			    	Ingredients: 
+					  {% for each in favorite.recipe.recipe_ingredients %}
+					  {{each.ingredient.ingredient_name}}{{"," if not loop.last}}     
+					  {% endfor %}
+
+			    </p>
+
+
+				    <button type="button" class="btn btn-outline-primary unlike_btn" id="unlike_btn" name= {{favorite.recipe.recipe_id}}> &#9829;
+				    </button>
+			  
+			   </div>
+			</div>
+		</div>
+	{% endfor %}
+
+<!-- <div class="row row-cols-1 row-cols-md-3">
 	{% for favorite in favorites %}
 	<div class="col mb-4">
 		<div class="card" style="width: 18rem;">
@@ -46,8 +90,9 @@ favorite.recipe (show recipe_card for each)
 		  {{each.ingredient.ingredient_name}} /   
 		  {% endfor %}
 
+	{% endfor %} -->
 	
-	{% endfor %}
+	
 </div>
 
 {% endblock %}
