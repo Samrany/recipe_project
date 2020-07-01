@@ -28,7 +28,7 @@
 
 			  {% for item in shopping_list_dict %}
 
-			  <input type="checkbox" name="ingredient">
+			  <input  type="checkbox" name="ingredient">
 			  <label class="ingredient"> {{item.ingredient_name}} {{shopping_list_dict[item]['amount']}} 
 			  				{% if shopping_list_dict[item]['metric'] != None %}
 			  				{{shopping_list_dict[item]['metric']}}

@@ -14,6 +14,7 @@
 
 
 <!-- 			<div class="nav-link ml-auto"> {{name}}'s favorites </div> -->
+			<div> {{name}}'s Favorites </div>
 			<div class="nav-link ml-auto"><a href = "/"> Home</a></div>
 			<div class="nav-link"><a href = "/log_out"> Logout </a></div>	
 
@@ -25,21 +26,21 @@
 
 
 
-<h1> {{name}}'s Favorites </h1>
+
 
 <!-- allow users to choose how many recipes to export to shopping list
  -->
-<h3> Get your shopping list! </h3>
-	<form action='/faves/get_shopping_list' method = "POST">
-		<p>
-			How many recipes do you want to cook?: 
-		<input type="number" min="1" name = "num_recipes"> 
-		</p>
-		<p>
-			<input type= "submit">
-		</p>
-	</form>
+<div class = "faves-get-list ">
+	<h3> Get your shopping list! </h3>
+		<form action='/faves/get_shopping_list' method = "POST">
 
+			<span>How many recipes do you want to cook?</span>	
+			<input class="form-group col-md-1" type="number" min="1" name = "num_recipes"> 
+
+			<input class= "col-xs-2" type= "submit">
+
+		</form>
+</div>
 <!-- for favorite in favorites:
 favorite.recipe (show recipe_card for each)
  -->
