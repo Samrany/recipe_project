@@ -16,7 +16,7 @@
 <h2 clas="form-header"> {{session['name']}}, your Shopping List and recipes have been sent to your e-mail! </h2>
 
 	<div class="col-md-6 shopping-container">
-	<h3 class="sub-head"> Recipe Links:</h3>
+	<h3 class="sub-head">    Recipe Links:</h3>
 		{% for recipe in recipes_to_cook %}
 		<li> <a href="/{{recipe.recipe_id}}"> {{recipe.recipe.recipe_name}} </a></li>
 		{% endfor %}
