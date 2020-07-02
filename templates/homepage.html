@@ -40,17 +40,14 @@
 
 <!-- <h2> Explore New Recipes </h2> -->
 
-<!-- <p></p>
-<div> <input type="text" placeholder="Search by Ingredient..." id="ingredient_filter"> </div>
-<p></p>
- -->
+
 <!-- for each recipe in db create a recipe card  
 Each recipe card link to page with all recipe details
 User can favorite recipe cards
 -->
 
 
-<!--  <div class="card-deck"> -->
+
 <div class="row row-cols-1 row-cols-md-3 card-container">
 	{% for recipe in recipes %}
 		<div class="col mb-4">
@@ -72,8 +69,7 @@ User can favorite recipe cards
 			    </p>
 
 			    {% if 'logged_in' in session %}
-				    <button type="button" class="btn btn-outline-primary like_btn" name= {{recipe.recipe_id}}> Like It 
-				    </button>
+				    <button type="button" class="btn btn-block like_btn" name= {{recipe.recipe_id}}> Like It </button>
 			    {% endif %}
 			  
 			   </div>

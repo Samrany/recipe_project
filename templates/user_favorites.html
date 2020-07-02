@@ -31,13 +31,13 @@
 <!-- allow users to choose how many recipes to export to shopping list
  -->
 <div class = "faves-get-list ">
-	<h3> Get your shopping list! </h3>
+	<h3 class="text-med"> Get your shopping list! </h3>
 		<form action='/faves/get_shopping_list' method = "POST">
 
-			<span>How many recipes do you want to cook?</span>	
-			<input class="form-group col-md-1" type="number" min="1" name = "num_recipes"> 
+			<span class="text-sm">How many recipes do you want to cook?</span>	
+			<input class="form-group input col-md-1" type="number" min="1" name = "num_recipes"> 
 
-			<input class= "col-xs-2" type= "submit">
+			<input class= "inline-btn col-xs-2" type= "submit">
 
 		</form>
 </div>

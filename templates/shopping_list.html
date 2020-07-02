@@ -13,12 +13,12 @@
 {% block body %} 
 <!-- justify-content-center -->
 <div class="row d-flex shopping-list justify-content-center">
-<h2 clas="form-header"> {{session['name']}}, your Shopping List and recipes have been sent to your e-mail! </h2>
+<h2 class="form-header"> {{session['name']}}, your shopping list and recipes have been sent to your e-mail! </h2>
 
 	<div class="col-md-6 shopping-container">
 	<h3 class="sub-head">    Recipe Links:</h3>
 		{% for recipe in recipes_to_cook %}
-		<li> <a href="/{{recipe.recipe_id}}"> {{recipe.recipe.recipe_name}} </a></li>
+		<li class="list-item"> <a href="/{{recipe.recipe_id}}"> {{recipe.recipe.recipe_name}} </a></li>
 		{% endfor %}
 
 		<p></p>
@@ -28,8 +28,8 @@
 
 			  {% for item in shopping_list_dict %}
 
-			  <input  type="checkbox" name="ingredient">
-			  <label class="ingredient"> {{item.ingredient_name}} {{shopping_list_dict[item]['amount']}} 
+			  <input  class= "list-item" type="checkbox" name="ingredient">
+			  <label class="list-item"> {{item.ingredient_name}} {{shopping_list_dict[item]['amount']}} 
 			  				{% if shopping_list_dict[item]['metric'] != None %}
 			  				{{shopping_list_dict[item]['metric']}}
 			  				{% endif %}
