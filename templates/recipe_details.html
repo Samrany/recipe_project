@@ -8,28 +8,26 @@
 <!-- 	row-cols-md-9 -->
 <!-- <div class="big-card"> -->
 	<div class="row form-header justify-content-md-center"> {{recipe.recipe_name}} </div>
-	<div class="row justify-content-md-center"> Serves: {{recipe.servings}} </div>
-	<div class="row justify-content-md-center"> Source: <a href={{recipe.website}} target="_blank"> {{recipe.source_name}}  </a> </div> 
+
 
 
     <div class="row">	
 		<div class="col-4">
-			<img class="lrg-img" src="{{recipe.image}}" >
+			<img class="row lrg-img" src="{{recipe.image}}" >
+			<div class="row "> Serves: {{recipe.servings}} </div>
+			<div class="row "> Source: 
+			<a class="source"href={{recipe.website}} target="_blank"> {{recipe.source_name}}  </a> </div> 
 		</div>
 
 
 		<div class= "col-8">
-
-
 		
-
-
 <!-- 		<img class="lrg-img" src="{{recipe.image}}" > -->
 
-			<div class="card-title"> Directions: </div>
-			<div class=""> {{recipe.directions}} </div>
+			<div class="detail-header"> Directions: </div>
+			<div class="directions"> {{recipe.directions}} </div>
 
-			<div class="card-title"> Ingredients: </div>
+			<div class="detail-header"> Ingredients: </div>
 
 
 			{% for recipe_ingredient in recipe.recipe_ingredients %}
