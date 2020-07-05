@@ -16,7 +16,7 @@ $('.like_btn').on('click', (evt) => {
 	$.post('/user_fave', {'recipe_id':recipe_id}, (response) =>{
 		
 		// if response at status = ok then:
-		evt.currentTarget.innerHTML = "Liked!"
+		evt.currentTarget.innerHTML = "&#9829"
 	});
 });
 

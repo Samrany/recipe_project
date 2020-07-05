@@ -69,7 +69,9 @@ User can favorite recipe cards
 			    </p>
 
 			    {% if 'logged_in' in session %}
-				    <button type="button" class="btn btn-block like_btn" name= {{recipe.recipe_id}}> Like It </button>
+			    <div class="text-center"> 
+				    <button type="button" class="btn btn-outline-info like_btn" name= {{recipe.recipe_id}}> &#9825 </button>
+				</div>
 			    {% endif %}
 			  
 			   </div>

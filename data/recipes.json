@@ -22,92 +22,6 @@
 		
 					]
 	},
-
-	{
-
-		"recipe_name": "RAW CHOCOLATE MILKSHAKE MIRACLE",
-		"source_name": "My New Roots",
-		"website": "https://www.mynewroots.org/site/2010/06/raw-chocolate-milkshake-miracle-2/",
-		"directions": " 1. Blend all the ingredients together; add water to thin if desired. It’s a thick one, folks!",
-		"image":"https://www.mynewroots.org/images/milkshake.jpg",
-		"servings":"1",
-		"ingredients": [{"ingredient_name":"hemp seeds", "amount": 0.25 , "metric": "cup"}, {
-						"ingredient_name":"raw cacao powder", "amount": 2, "metric": "tbsp"}, {
-						"ingredient_name":"avocado", "amount": 1}, {
-						"ingredient_name":"banana", "amount": 1, "preparation": "large, frozen"}, {
-						"ingredient_name":"honey", "amount": 2, "metric": " tbsp"}, {
-						"ingredient_name":"sea salt", "amount": 1 , "metric": "dash"}, {
-						"ingredient_name":"water", "amount": 0.75 , "metric": "cup"}, {
-						"ingredient_name":"ice cubes", "amount": 4  
-						}
-						]
-
-	},
-	{
-		"recipe_name": "sausage and bell pepper skillet",
-		"source_name": "The Defined Dish",
-		"website": "https://thedefineddish.com/sausage-and-bell-pepper-skillet/ ",
-		"directions": "Heat oil in a large skillet over medium-high heat.Add the cut sausages to the skillet and brown on both sides, 2-3 minutes per side. Transfer brown sausages to a plate and set aside. Add the sliced bell peppers and onions to the skillet with some salt and pepper and cook, stirring, until tender, 4 to 6 minutes. Pour in the marinara and stir to combine. Nestle the sausages into the sauce and let simmer to reheat the sausages, about 3 more minutes. Serve over a bed of arugula, enjoy!",
-		"image":"https://thedefineddish.com/wp-content/uploads/2019/09/2019-08-26-06.56.50-768x1152.jpg",
-		"servings":"2",
-		"ingredients": [{"ingredient_name":"olive oil", "amount": 2, "metric": "tbsp"}, {
-						"ingredient_name":"Italian Sausage", "amount": 1, "metric": "lb", "prepartion": "cut into 2 inch pieces"}, { 
-					    "ingredient_name":"bell peppers", "amount": 2, "preparation": "seeded and sliced thin"}, {
-					    "ingredient_name":"yellow onion", "amount": 0.5}, {
-					    "ingredient_name":"marinara sauce", "amount": 1, "metric": "cup"}, {					    	
-					    "ingredient_name":"baby arugula", "amount": 2, "metric": "cups"}
-					    
-						
-					   ]
-					    
-
-
-	},
-
-
-
-	{
-		"recipe_name": "Grain-Free Apple Cinnamon Breakfast Porridge",
-		"source_name": "Dr. Hyman",
-		"website": "https://drhyman.com/blog/2018/05/24/grain-free-apple-cinnamon-breakfast-porridge/",
-		"directions": "1. Combine all ingredients in blender and \n blend until smooth. 2. Transfer the mixture to a small saucepan and heat over medium-low, about 3-5 minutes, until the mixture begins to thicken. 3.Top with optional chopped nuts and cinnamon, serve warm, and enjoy!",
-		"image":"https://drhyman.com/wp-content/uploads/2018/05/Apple-Cinnamon-Porridge-Kelsey-Ale-1.jpg",
-		"servings":"1",
-		"ingredients": [{"ingredient_name":"flax meal", "amount": 2, "metric": "tbsp"}, {
-						"ingredient_name":"coconut milk", "amount": 0.5, "metric": "cup"}, {
-						"ingredient_name":"green apple", "amount":0.5, "preparation": "peeled, cored, and diced"}, {
-						"ingredient_name":"collagen protein powder", "amount":1, "metric": "scoop"}, {
-						"ingredient_name":"almond butter", "amount":2 , "metric": "tbsp"}, {
-						"ingredient_name":"cinnamon", "amount": 0.5, "metric": "tsp"}, {
-						"ingredient_name":"vanilla extract", "amount": 0.25 , "metric": "teaspoon"}, {
-						"ingredient_name":"Chopped nuts and cinnamon", "amount":1, "preparation": "for garnish"} 
-			  
-		
-					]
-
-	},
-
-
-
-	{
-		"recipe_name": "Creamy Fennel Kale Chicken Salad",
-		"source_name": "Dr. Hyman",
-		"website": "https://drhyman.com/blog/2018/05/31/creamy-fennel-kale-chicken-salad/",
-		"directions": "1. Preheat oven to 400° F. 2. On a baking sheet, place prepared fennel and leeks. 3.Toss vegetables with 2 tablespoons avocado oil, Himalayan salt, and dash of black pepper. 4. In a separate bowl, massage kale with 1 tablespoon avocado oil, dash of salt and pepper, and set the kale aside.5. Bake fennel and leeks for 40 minutes and add kale to the baking sheet for the last 10-12 minutes of baking.6. Heat 1 tablespoon avocado oil in a large pan, over medium heat. Add chicken and sauté until lightly cooked, about 3-4 minutes per side.7. In a small bowl, mix almond yogurt, chicken broth, and mustard and pour on top of chicken.8. Add the roasted vegetables to pan and continue to heat for 3 minutes, then enjoy!",
-		"image":"https://drhyman.com/wp-content/uploads/2018/05/Grilled-Chicken-1.jpg",
-		"servings":"4",
-		"ingredients": [{"ingredient_name":"leeks", "amount": 2, "preparation": "thinly sliced"}, {
-						"ingredient_name":"fennel bulbs", "amount": 2, "preparation": "cored and thinly sliced"}, {
-						"ingredient_name":"avocado oil", "amount":0.25, "metric": "cup"}, {
-						"ingredient_name":"curly kale", "amount": 5 , "metric": "cups", "preparation": "chopped"}, {
-						"ingredient_name":"chicken breast cutlets, skinless", "amount":1, "metric": "lb"}, {
-						"ingredient_name":"chicken broth", "amount":0.5 , "metric": "cup"}, {
-						"ingredient_name":"almond yogurt, unsweetened", "amount": 0.25, "metric": "cup"}, {
-						"ingredient_name":"whole grain mustard", "amount": 1, "metric": "tbsp"}			  
-		
-					]
-
-	},
 	{
 		"recipe_name": "Almond Flour Pancakes",
 		"source_name": "Sweet Potato Soul",
@@ -131,6 +45,102 @@
 					]
 
 	},
+
+	
+	{
+		"recipe_name": "sausage and bell pepper skillet",
+		"source_name": "The Defined Dish",
+		"website": "https://thedefineddish.com/sausage-and-bell-pepper-skillet/ ",
+		"directions": "Heat oil in a large skillet over medium-high heat.Add the cut sausages to the skillet and brown on both sides, 2-3 minutes per side. Transfer brown sausages to a plate and set aside. Add the sliced bell peppers and onions to the skillet with some salt and pepper and cook, stirring, until tender, 4 to 6 minutes. Pour in the marinara and stir to combine. Nestle the sausages into the sauce and let simmer to reheat the sausages, about 3 more minutes. Serve over a bed of arugula, enjoy!",
+		"image":"https://thedefineddish.com/wp-content/uploads/2019/09/2019-08-26-06.56.50-768x1152.jpg",
+		"servings":"2",
+		"ingredients": [{"ingredient_name":"olive oil", "amount": 2, "metric": "tbsp"}, {
+						"ingredient_name":"Italian Sausage", "amount": 1, "metric": "lb", "prepartion": "cut into 2 inch pieces"}, { 
+					    "ingredient_name":"bell peppers", "amount": 2, "preparation": "seeded and sliced thin"}, {
+					    "ingredient_name":"yellow onion", "amount": 0.5}, {
+					    "ingredient_name":"marinara sauce", "amount": 1, "metric": "cup"}, {					    	
+					    "ingredient_name":"baby arugula", "amount": 2, "metric": "cups"}
+					    
+						
+					   ]
+					    
+
+
+	},
+
+	{
+		"recipe_name": "Greek Lamb Burger",
+		"source_name": "Eat the Gains",
+		"website": "https://eatthegains.com/greek-lamb-burger/",
+		"directions": "For the Tzatziki, add the Greek Yogurt, cucumber, garlic, 1 tbsp olive oil, lemon juice and fresh dill into a small mixing bowl. Mix until well combined. Store in the fridge in a glass sealed container for up to a week.",
+		"image":"https://eatthegains.com/wp-content/uploads/2020/07/Lamb-Burger-4.jpg",
+		"servings":"4",
+		"ingredients": [{"ingredient_name":"ground lamb", "amount": 1, "metric": "lb"}, {
+						"ingredient_name":"red onion", "amount": 0.5, "metric": "cup", "preparation": "chopped"}, {
+						"ingredient_name":"garlic", "amount": 3, "metric": "cloves",  "preparation":"minced"}, {
+						"ingredient_name":"parsley", "amount": 0.5, "metric": "cup", "preparation": "chopped"}, {
+						"ingredient_name":"mint leaves", "amount": 1, "metric": "tbsp", "preparation": "chopped and packed"}, {
+						"ingredient_name":"dried oregano", "amount": 1, "metric": "tsp"}, {
+						"ingredient_name":"butter lettuce", "amount": 1	}, {
+						"ingredient_name":"tomatoe", "amount": 1, "preparation": "sliced"}, {
+						"ingredient_name":"greek yogurt", "amount": 1, "metric": "cup"}, {
+						"ingredient_name":"cucumber", "amount": 0.5, "metric": "cup", "preparation": "deseeded and diced"}, {  
+			  			"ingredient_name":"garlic", "amount": 3, "metric": "cloves", "preparation": "minced"}, {  
+						"ingredient_name":"olive oil", "amount": 1, "metric": "tbsp"}, { 
+						"ingredient_name":"lemon juice", "amount": 1, "metric": "tbsp"}, { 
+						"ingredient_name":"fresh dill", "amount": 1, "metric": "tbsp"} 
+					]
+
+	},
+
+	{
+		"recipe_name": "Sheet Pan Nachos",
+		"source_name": "Love & Lemons",
+		"website": "https://www.loveandlemons.com/nachos-recipe/",
+		"directions": "Assemble the tortilla chips on a platter. Drizzle with the cheese sauce, taco “meat”, tomato, scallions, serrano, avocado, radishes, and pickled onions. Sprinkle with cilantro and serve with lime wedges, for squeezing.",
+		"image":"https://cdn.loveandlemons.com/wp-content/uploads/2020/01/nachos-recipe.jpg",
+		"servings":"4",
+		"ingredients": [{"ingredient_name":"Tortilla Chips", "amount":1 , "metric": "bag"}, {
+						"ingredient_name":"Vegan Cheese", "amount": 1, "metric": "cup"}, {
+						"ingredient_name":"taco meat", "amount": 1, "metric": "cup"}, {
+						"ingredient_name":"tomatoes", "amount": 3, "preparation": "diced"}, {
+						"ingredient_name":"white onion", "amount": 0.75, "metric": "cup", "preparation":"diced"}, {
+						"ingredient_name":"garlic cloves", "amount": 2, "preparation": "minced"}, {
+						"ingredient_name":"jalapeño", "amount": 1, "preparation": "stemmed and diced"}, {
+						"ingredient_name":"scallions", "amount": 2, "metric": "tbsp", "preparation": "chopped"}, {
+						"ingredient_name":"avocado", "amount": 1, "preparation": "sliced"}, {
+						"ingredient_name":"pickled onions", "amount": 0.25, "metric": "cup"}, {
+						"ingredient_name":"cilantro", "amount": 0.75, "metric": "cup"}, {
+						"ingredient_name":"lime", "amount":2 } 
+			  
+		
+					]
+
+	},
+
+
+	{
+		"recipe_name": "GREEN PAPAYA SALAD (SOM TAM)",
+		"source_name": "The inquiring chef",
+		"website": "https://inquiringchef.com/green-papaya-salad-som-tam/",
+		"directions": "1. Combine garlic and chilis in a mortar and pestle. Pound until chilis are broken apart and garlic is finely ground. 2. Add palm sugar and pound until sugar starts to dissolve. 3. Add peanuts and pound until broken into small pieces. 4. Add beans and pound a couple times to break them apart. 5. Add tomatoes and green papaya together and pound, focusing on the papaya until the strands all feel tender and look slightly damp. 6. Add fish sauce and lime juice. Use a large spoon or spatula, alternate scooping and turning the ingredients and pounding them with the pestle so that everything gets mixed together. Be sure that you’re scooping up any of the garlic, chilis, and sugar that might be stuck to the bottom. 7. Taste a strand of papaya and add more fish sauce or lime juice, to taste. (If you’d like it a bit more sweet, soak the palm sugar in a tiny bit of hot water to soften it first so that it gets distributed evenly.) Give everything a final mix with the spoon / pestle. 8. Serve immediately!",
+		"image":"https://p3mqb1sb6912thmge2m75zc1-wpengine.netdna-ssl.com/wp-content/uploads/2019/02/Green-Papaya-Salad_5.jpg",		"servings":"6",
+		"ingredients": [{"ingredient_name":"garlic", "amount": 2, "metric": "cloves"}, {
+						"ingredient_name":"lime juice", "amount": 2, "metric": "tsp"}, {
+						"ingredient_name":"Bird’s Eye Chilis", "amount": 2}, { 
+						"ingredient_name":"dried shrimp", "amount": 2, "metric": "tbsp"}, { 		
+						"ingredient_name":"fish sauce", "amount": 2, "metric": "tsp"}, {
+						"ingredient_name":"palm sugar", "amount": 1, "metric": "tbsp"}, {
+						"ingredient_name":"green papaya", "amount": 4, "metric": "cups", "preparation": "shredded"}, {
+						"ingredient_name":"green beens", "amount": 0.25, "metric": "lbs"}, {
+						"ingredient_name":"cherry tomatoes", "amount": 5, "preparation": "sliced in half"}, { 
+						"ingredient_name":"roasted, unsalted peanuts", "amount": 0.25, "metric": "cup", "preparation":"chopped"}
+			  
+		
+					]
+
+	},
+
 
 	{
 		"recipe_name": "One Bowl Pumpkin Chocolate Muffins",
@@ -158,21 +168,21 @@
 
 	},
 
+
 	{
-		"recipe_name": "schug",
-		"source_name": "Alexandra's Kitchen",
-		"website": "https://alexandracooks.com/wp-content/uploads/2018/03/skhug.jpg",
-		"directions": "1. In a small skillet, toast the cumin and coriander seeds until they smell fragrant and have turned a shade darker in color. Transfer to a spice grinder or crush with a mortar and pestle. 2. Put the chilies and garlic in a food processor and pulse a few times until they are fairly fine. Add the cilantro, parsley, lemon zest, reserved toasted spiced, 1 tablespoon of lemon juice, 1/2 teaspoon kosher salt, and a few twists of black pepper. Pulse until all is finely chopped into a rough purée. With the motor running, drizzle in the olive oil. Stop the processor before the sauce is completely blended and smooth—you want some texture. Taste the sauce and adjust the seasoning with another 1/2 teaspoon salt (I always do), and pepper and lemon to taste.",
-		"image":"https://alexandracooks.com/wp-content/uploads/2020/06/schug2_alexandraskitchen-500x715.jpg",
-		"servings":"1",
-		"ingredients": [{"ingredient_name":"coriander seeds", "amount": 1, "metric": "tsp"}, {
-						"ingredient_name":"cumin seeds", "amount": 1, "metric": "tsp"}, {
-						"ingredient_name":"green chilies", "amount":0.5, "metric": "cup", "preparation": "seeded and roughly chopped"}, {
-						"ingredient_name":"garlic cloves", "amount":3, "preparation": "smashed and peeled"}, {
-						"ingredient_name":"cilantro", "amount": 2, "metric": "cups", "preparation": "lightly packed"}, {
-						"ingredient_name":"flat-leaf parsley", "amount": 2, "metric": "cups","preparation":"lightly packed"}, {
-						"ingredient_name":"lemon", "amount": 1, "preparation": "juice"}, {
-						"ingredient_name":"olive oil", "amount": 0.5, "metric": "cup"}
+		"recipe_name": "SHEET PAN HONEY DIJON CHICKEN",
+		"source_name": "Inquiring Chef",
+		"website": "https://inquiringchef.com/sheet-pan-honey-dijon-chicken/",
+		"directions": "1. Heat the oven to 450°F. 2. Line a large sheet pan with parchment or foil (optional, but will make it easier to clean). (Note: The key to nice golden brown roasted vegetables is not to crowd them on the pan, so if it looks like your vegetables will be crowded, use two pans.) 3. While the oven is heating, chop the Brussels sprouts and carrots. 4. Toss the vegetables with 2 Tbsp cooking oil and season generously with some salt and pepper. 5. Spread out on the sheet pan. 6. Add the chicken thighs to the pan, nestling them  between the vegetables. 7. Drizzle the tops of the chicken with 1 Tbsp cooking oil and then season the tops of the chicken thighs with some salt and pepper. 8. Transfer the pan to the oven and roast for 15 minutes to get the chicken and vegetables started cooking. 9. Whisk together mayonnaise, honey, and mustard. Divide into two small bowls. 10. After they have been cooking for 15 minutes, remove the chicken and vegetables from the oven. Use a spatula to turn the vegetables so that the cook evenly. 11. Brush the first half of honey mustard over the tops of the chicken thighs. (Reserve the second half.) 12. Return the sheet pan to the oven and continue cooking until the chicken is cooked through and the vegetables are tender, 10 to 15 minutes more. (The timing will vary depending on the size of the chicken thighs; when done, the chicken should register 165°F degrees in the middle). 13. Serve chicken and vegetables with the remaining honey mustard for dipping.",
+		"image":"https://p3mqb1sb6912thmge2m75zc1-wpengine.netdna-ssl.com/wp-content/uploads/2019/10/Sheet-Pan-Honey-Dijon-Chicken-and-Vegetables_1.jpg",
+		"servings":"4",
+		"ingredients": [{"ingredient_name":"Mayonnaise", "amount": 2, "metric": "tbsp"}, {
+						"ingredient_name":"Honey", "amount": 3, "metric": "tbsp"}, {
+						"ingredient_name":"Dijon Mustard", "amount": 3, "metric": "tbsp"}, {
+						"ingredient_name":"brussels Sprouts", "amount": 1, "metric": "lb", "preparation": "sliced in half"}, {
+						"ingredient_name":"carrots", "amount": 1, "metric": "lb", "preparation": "quartered and cut into 3” pieces"}, {
+						"ingredient_name":"avocado oil", "amount": 3, "metric": "tbsp"}, {
+						"ingredient_name":"Boneless, Skinless Chicken Thighs", "amount": 4}
 			  
 		
 					]
@@ -205,7 +215,119 @@
 
 
 	},
+
+		{
+		"recipe_name": "Thai Red Curry with Chicken and Squash",
+		"source_name": "Inquiring Chef",
+		"website": "https://inquiringchef.com/thai-red-curry-with-chicken/",
+		"directions": "1. Heat a Dutch oven, wok, or saute pan over medium heat. Add ¾ cup coconut milk (if using canned coconut milk that has separated, use the top, thicker portion of the milk) to the pan. Simmer coconut milk, stirring constantly, until it has reduced by half and you can see oil separating from the milk, 5 to 6 minutes. (Note: This step to “break” the coconut milk is part of the traditional process, but don’t worry if your coconut milk doesn’t show signs of separating after this initial cook time - just proceed with the recipe.) 2. Add curry paste and saute until fragrant, 2 to 3 minutes. 3. Add chicken breast and stir to coat in the curry paste. 4. Pour chicken stock and 1 cup coconut milk over chicken. 5. Stir in squash, bell pepper, palm sugar, and fish sauce. Bring to a simmer and let curry simmer gently until chicken is cooked through, 10 to 15 minutes. (Reduce heat as needed to prevent the curry from reaching a hard boil.) 6. Taste the curry and adjust the flavor, adding more sugar or fish sauce if needed. 7. Remove curry from heat and stir in Thai Basil leaves. 8. Serve curry over rice.",
+		"image":"https://p3mqb1sb6912thmge2m75zc1-wpengine.netdna-ssl.com/wp-content/uploads/2020/02/Thai-Red-Curry_1-1097x1536.jpg",
+		"servings":"4",
+		"ingredients": [{"ingredient_name":"Coconut Milk", "amount": 1.75, "metric": "cups"}, {
+						"ingredient_name":"Thai Red Curry Paste", "amount": 3, "metric": "tbsp"}, {
+						"ingredient_name":"Boneless, Skinless Chicken Breast", "amount": 1, "metric": "lb", "preparation": "cubed"}, {
+						"ingredient_name":"Chicken Stock", "amount": 2, "metric": "cups"}, {
+						"ingredient_name":"squash", "amount": 12, "metric": "oz", "preparation": "cubed or thinly sliced"}, {
+						"ingredient_name":"Red Bell Pepper", "amount": 0.5, "preparation": "thinly sliced"}, {
+						"ingredient_name":"Palm Sugar", "amount": 1, "metric": "tbsp"}, {
+						"ingredient_name":"Fish Sauce", "amount": 1.5, "metric": "tbsp"}, {
+						"ingredient_name":"Thai Jasmine Rice", "amount": 4, "preparation":"for serving"}, {
+						"ingredient_name":"Thai Basil leaves", "amount": 1, "metric": "cup"}
+			  
+		
+					]
+
+	},
+
+
+		{
+		"recipe_name": "Grain-Free Apple Cinnamon Breakfast Porridge",
+		"source_name": "Dr. Hyman",
+		"website": "https://drhyman.com/blog/2018/05/24/grain-free-apple-cinnamon-breakfast-porridge/",
+		"directions": "1. Combine all ingredients in blender and blend until smooth. 2. Transfer the mixture to a small saucepan and heat over medium-low, about 3-5 minutes, until the mixture begins to thicken. 3.Top with optional chopped nuts and cinnamon, serve warm, and enjoy!",
+		"image":"https://drhyman.com/wp-content/uploads/2018/05/Apple-Cinnamon-Porridge-Kelsey-Ale-1.jpg",
+		"servings":"1",
+		"ingredients": [{"ingredient_name":"flax meal", "amount": 2, "metric": "tbsp"}, {
+						"ingredient_name":"coconut milk", "amount": 0.5, "metric": "cup"}, {
+						"ingredient_name":"green apple", "amount":0.5, "preparation": "peeled, cored, and diced"}, {
+						"ingredient_name":"collagen protein powder", "amount":1, "metric": "scoop"}, {
+						"ingredient_name":"almond butter", "amount":2 , "metric": "tbsp"}, {
+						"ingredient_name":"cinnamon", "amount": 0.5, "metric": "tsp"}, {
+						"ingredient_name":"vanilla extract", "amount": 0.25 , "metric": "teaspoon"}, {
+						"ingredient_name":"Chopped nuts and cinnamon", "amount":1, "preparation": "for garnish"} 
+			  
+		
+					]
+
+	},
+
 	{
+		"recipe_name": "schug",
+		"source_name": "Alexandra\n's Kitchen",
+		"website": "https://alexandracooks.com/wp-content/uploads/2018/03/skhug.jpg",
+		"directions": "1. In a small skillet, toast the cumin and coriander seeds until they smell fragrant and have turned a shade darker in color. Transfer to a spice grinder or crush with a mortar and pestle. 2. Put the chilies and garlic in a food processor and pulse a few times until they are fairly fine. Add the cilantro, parsley, lemon zest, reserved toasted spiced, 1 tablespoon of lemon juice, 1/2 teaspoon kosher salt, and a few twists of black pepper. Pulse until all is finely chopped into a rough purée. With the motor running, drizzle in the olive oil. Stop the processor before the sauce is completely blended and smooth—you want some texture. Taste the sauce and adjust the seasoning with another 1/2 teaspoon salt (I always do), and pepper and lemon to taste.",
+		"image":"https://alexandracooks.com/wp-content/uploads/2020/06/schug2_alexandraskitchen-500x715.jpg",
+		"servings":"1",
+		"ingredients": [{"ingredient_name":"coriander seeds", "amount": 1, "metric": "tsp"}, {
+						"ingredient_name":"cumin seeds", "amount": 1, "metric": "tsp"}, {
+						"ingredient_name":"green chilies", "amount":0.5, "metric": "cup", "preparation": "seeded and roughly chopped"}, {
+						"ingredient_name":"garlic cloves", "amount":3, "preparation": "smashed and peeled"}, {
+						"ingredient_name":"cilantro", "amount": 2, "metric": "cups", "preparation": "lightly packed"}, {
+						"ingredient_name":"flat-leaf parsley", "amount": 2, "metric": "cups","preparation":"lightly packed"}, {
+						"ingredient_name":"lemon", "amount": 1, "preparation": "juice"}, {
+						"ingredient_name":"olive oil", "amount": 0.5, "metric": "cup"}
+			  
+		
+					]
+
+	},
+
+
+
+
+
+	{
+
+		"recipe_name": "RAW CHOCOLATE MILKSHAKE MIRACLE",
+		"source_name": "My New Roots",
+		"website": "https://www.mynewroots.org/site/2010/06/raw-chocolate-milkshake-miracle-2/",
+		"directions": " 1. Blend all the ingredients together; add water to thin if desired. It’s a thick one, folks!",
+		"image":"https://www.mynewroots.org/images/milkshake.jpg",
+		"servings":"1",
+		"ingredients": [{"ingredient_name":"hemp seeds", "amount": 0.25 , "metric": "cup"}, {
+						"ingredient_name":"raw cacao powder", "amount": 2, "metric": "tbsp"}, {
+						"ingredient_name":"avocado", "amount": 1}, {
+						"ingredient_name":"banana", "amount": 1, "preparation": "large, frozen"}, {
+						"ingredient_name":"honey", "amount": 2, "metric": " tbsp"}, {
+						"ingredient_name":"sea salt", "amount": 1 , "metric": "dash"}, {
+						"ingredient_name":"water", "amount": 0.75 , "metric": "cup"}, {
+						"ingredient_name":"ice cubes", "amount": 4  
+						}
+						]
+
+	},
+
+	{
+		"recipe_name": "Creamy Fennel Kale Chicken Salad",
+		"source_name": "Dr. Hyman",
+		"website": "https://drhyman.com/blog/2018/05/31/creamy-fennel-kale-chicken-salad/",
+		"directions": "1. Preheat oven to 400° F. 2. On a baking sheet, place prepared fennel and leeks. 3.Toss vegetables with 2 tablespoons avocado oil, Himalayan salt, and dash of black pepper. 4. In a separate bowl, massage kale with 1 tablespoon avocado oil, dash of salt and pepper, and set the kale aside.5. Bake fennel and leeks for 40 minutes and add kale to the baking sheet for the last 10-12 minutes of baking.6. Heat 1 tablespoon avocado oil in a large pan, over medium heat. Add chicken and sauté until lightly cooked, about 3-4 minutes per side.7. In a small bowl, mix almond yogurt, chicken broth, and mustard and pour on top of chicken.8. Add the roasted vegetables to pan and continue to heat for 3 minutes, then enjoy!",
+		"image":"https://drhyman.com/wp-content/uploads/2018/05/Grilled-Chicken-1.jpg",
+		"servings":"4",
+		"ingredients": [{"ingredient_name":"leeks", "amount": 2, "preparation": "thinly sliced"}, {
+						"ingredient_name":"fennel bulbs", "amount": 2, "preparation": "cored and thinly sliced"}, {
+						"ingredient_name":"avocado oil", "amount":0.25, "metric": "cup"}, {
+						"ingredient_name":"curly kale", "amount": 5 , "metric": "cups", "preparation": "chopped"}, {
+						"ingredient_name":"chicken breast cutlets, skinless", "amount":1, "metric": "lb"}, {
+						"ingredient_name":"chicken broth", "amount":0.5 , "metric": "cup"}, {
+						"ingredient_name":"almond yogurt, unsweetened", "amount": 0.25, "metric": "cup"}, {
+						"ingredient_name":"whole grain mustard", "amount": 1, "metric": "tbsp"}			  
+		
+					]
+
+	},
+
+		{
 		"recipe_name": "roasted cabbage with walnuts and parmesan",
 		"source_name": "Smitten Kitchen",
 		"website": "https://smittenkitchen.com/2019/11/roasted-cabbage-with-walnuts-and-parmesan/",
@@ -219,30 +341,6 @@
 						"ingredient_name":"lemon", "amount":1 }, {
 						"ingredient_name":"parmesan", "amount": 1, "preparation": "grated to taste"
 						}
-			  
-		
-					]
-
-	},
-	{
-		"recipe_name": "Sheet Pan Nachos",
-		"source_name": "Love & Lemons",
-		"website": "https://www.loveandlemons.com/pico-de-gallo/",
-		"directions": "Assemble the tortilla chips on a platter. Drizzle with the cheese sauce, taco “meat”, tomato, scallions, serrano, avocado, radishes, and pickled onions. Sprinkle with cilantro and serve with lime wedges, for squeezing.",
-		"image":"https://cdn.loveandlemons.com/wp-content/uploads/2020/01/nachos-recipe.jpg",
-		"servings":"4",
-		"ingredients": [{"ingredient_name":"Tortilla Chips", "amount":1 , "metric": "bag"}, {
-						"ingredient_name":"Vegan Cheese", "amount": 1, "metric": "cup"}, {
-						"ingredient_name":"taco meat", "amount": 1, "metric": "cup"}, {
-						"ingredient_name":"tomatoes", "amount": 3, "preparation": "diced"}, {
-						"ingredient_name":"white onion", "amount": 0.75, "metric": "cup", "preparation":"diced"}, {
-						"ingredient_name":"garlic cloves", "amount": 2, "preparation": "minced"}, {
-						"ingredient_name":"jalapeño", "amount": 1, "preparation": "stemmed and diced"}, {
-						"ingredient_name":"scallions", "amount": 2, "metric": "tbsp", "preparation": "chopped"}, {
-						"ingredient_name":"avocado", "amount": 1, "preparation": "sliced"}, {
-						"ingredient_name":"pickled onions", "amount": 0.25, "metric": "cup"}, {
-						"ingredient_name":"cilantro", "amount": 0.75, "metric": "cup"}, {
-						"ingredient_name":"lime", "amount":2 } 
 			  
 		
 					]
