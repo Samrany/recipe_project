@@ -35,8 +35,10 @@ Create a gmail account from which to send emails
 Change sender email in send_email.py file to your new gmail account.
 
 Save your API keys in a file called "secrets.sh" using this format:
+```sh
 export EMPASSWORD="YOUR PASSWORD HERE”
 export SPOONACULAR="YOUR API KEY HERE"
+```
 
 Source your keys from your secrets.sh file into your virtual environment
 ```sh
