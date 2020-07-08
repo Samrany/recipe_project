@@ -167,8 +167,7 @@ def get_shopping_list():
 		
 		shopping_list_dict = metrics.create_shopping_list(recipes_to_cook)
 
-		# ****temporarily passing my e-mail instead of session['email'].
-		send_email.send_email('shira.amrany@gmail.com', session['name'], recipes_to_cook, shopping_list_dict)
+		send_email.send_email(session['email'], session['name'], recipes_to_cook, shopping_list_dict)
 		
 		return render_template("shopping_list.html", recipes_to_cook = recipes_to_cook, shopping_list_dict = shopping_list_dict)
 
