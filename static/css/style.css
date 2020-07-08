@@ -1,0 +1,352 @@
+html, body {
+
+
+}
+
+body {
+
+form
+
+}
+
+.top, .form-background{
+	background-color: #F8F8F8;
+}
+
+
+/*NAV BAR*/
+
+.nav-header{
+
+
+}
+
+.title{
+/*
+	margin-top: 40px;*/
+	padding-top: 40px;
+	font-family:'League Script', cursive;
+	font-size: 50px;
+	text-align: center;
+
+}
+	
+.navbar {
+
+	}
+
+
+.navlink {
+
+/*text-align: right;*/
+
+}
+
+
+#ingredient_filter{
+
+
+}
+
+/*	CARDS*/
+
+
+.hidden_class{
+	display: none;
+}
+
+
+.card-container{
+	margin-left: 45px;
+	margin-right: 15px;
+	margin-top: 30px;
+
+
+}
+
+.card
+{
+	width: 18rem;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+
+
+
+
+.card-text, .card-subtitle {
+/* font-family:'Montserrat', sans-serif;*/
+	margin-left: 10px;
+
+
+}
+
+.card-title {
+	text-align: center;
+	margin-bottom: 15px;
+
+
+}
+
+/*.card-subtitle{
+
+}*/
+
+.like_btn, .unlike_btn{
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px solid #BDDED8;
+	border-color: #BDDED8;
+	color: #BDDED8;
+
+}
+
+
+.like_btn:hover, .unlike_btn:hover {
+	background-color: #BDDED8;
+	border: 2px solid #BDDED8;
+	color: white;
+
+/*	color: white;*/
+}
+
+.like_btn:focus, .unlike_btn:focus, .submit-btn:focus {
+  box-shadow: none;
+}
+
+/*
+.like_btn{
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px solid #BDDED8;
+	border-color: #BDDED8;
+	color: #BDDED8;
+
+}*/
+
+
+/*.like_btn:hover {
+	background-color: #BDDED8;
+	border: 2px solid #BDDED8;
+	color: white;
+
+/*	color: white;*/
+/*}*/
+
+/*.like_btn:focus {
+  box-shadow: none;
+}*/
+
+
+/*.like_btn{
+  margin-left: auto;
+  margin-right: auto;
+  border: #d7dfdbff;
+  color: white;
+  background-color: #d7dfdbff;
+  border: 2px solid white;*/
+
+/*}*/
+
+/*
+.like_btn{
+  margin-left: auto;
+  margin-right: auto;
+  border: #d7dfdbff;
+  color: white;
+  background-color: #d7dfdbff;
+  border: 2px solid white;
+
+}
+
+.like_btn:hover {
+	border: 2px solid #e7e7e7;
+	color: #e7e7e7;
+
+}
+.like_btn:hover {
+/*	background-color: #e7e7e7;*/
+/*	border: 2px solid #e7e7e7;
+	color: #e7e7e7;*/
+
+/*	color: white;*/
+/*}
+
+.like_btn:focus {
+  box-shadow: none;
+}*/
+
+
+/*SIGN-IN*/
+
+
+.form{
+	width: 25%;
+	padding: 70px 0;
+	background-color: #F8F8F8;
+	margin: auto;
+	text-align: center;
+}
+
+.form-header{
+
+	text-align: center;
+	padding: 50px;
+	font-size: x-large;
+	color: #363636ff;
+	font-family: 'Roboto', sans-serif;
+/*	bottom: 20px;*/
+/*	height: 400px;*/
+/*	padding-bottom: 15px;*/
+
+}
+
+.submit-btn{
+	margin-top: 70px;
+	margin-bottom: 70px;
+	width: 75%;
+	margin-left: auto;
+  	margin-right: auto;
+  	background-color: #d7dfdbff;
+  	color: white;
+  	border: 2px solid #d7dfdbff;
+}
+
+.submit-btn:hover {
+	background-color: #e7e7e7;
+	border: 2px solid #e7e7e7;
+	color: white;
+
+}
+
+.form-control{
+	width: 75%;
+  	margin-left: auto;
+  	margin-right: auto;
+
+}
+
+
+/*FAVORITE PAGE*/
+
+.faves-get-list{
+	text-align: center;
+	padding: 10px;
+	padding-top: 15px;
+
+}
+
+.inline-btn{
+	background-color: #d7dfdbff;
+  	color: white;
+  	border: 2px solid #d7dfdbff;
+
+}
+
+.inline-btn:hover {
+	background-color: #e7e7e7;
+	border: 2px solid #e7e7e7;
+	color: white;
+	outline-style: none;
+}
+
+
+.form-group{
+	border: 2px solid #e7e7e7;
+	outline:none;
+}
+
+
+
+/*SHOPPING LIST*/
+
+.shopping-container{
+	background-color: #F8F8F8;
+	padding: 25px;
+
+
+}
+
+.shopping-list{
+
+	margin: auto;
+/*	margin-top: 20px;*/
+/*	margin-left:*/
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 10px; 
+	padding-bottom: 70px;
+}
+
+.sub-head{
+	padding-top: 5px;
+	padding-bottom:10px;
+	padding-left: 7px;
+	background-color: #d7dfdbff;
+	font-size: medium;
+
+}
+
+
+
+.list-item{
+	padding-left: 7px;
+/*		background-color: #F8F8F8;*/
+
+	}
+
+
+.text-med{
+	font-weight: 380;
+
+}
+
+/*.text-sm{
+	font-family: 'Roboto', sans-serif;
+	font-size: 	medium;
+
+}*/
+
+
+/* SCSS HEX */
+/*$gainsboro: #d7dfdbff;
+$white: #ffffffff;
+$jet: #363636ff;
+$rosy-brown: #cb9186ff;
+$eggplant: #70525eff;*/
+/*$gray: F8F8F8
+*/
+
+
+/*RECIPE DETAILS*/
+
+.lrg-img{
+  width: 98%; 
+}
+
+.big-card-container{
+/*	width: 75rem;*/
+	margin-left: 45px;
+	margin-right:15px;	
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+.source{
+	margin-left: 5px;
+
+}
+
+.detail-header{
+	text-align: left;
+	margin-bottom: 15px;
+	font-weight: bold;
+
+}
+
+.directions{
+	margin-bottom: 30px;
+}

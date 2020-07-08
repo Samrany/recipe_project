@@ -1,6 +1,7 @@
 """CRUD operations."""
 
 from model import db, User, Recipe, Fave_recipes, Ingredient, Recipe_ingredients, User_no_goes, connect_to_db
+import string
 
 if __name__ == '__main__':
     from server import app
@@ -82,7 +83,7 @@ def create_new_recipe(recipe_name, source_name, website, directions, image, serv
     ingredients in recipes where ingredients is a list of dictionary objects."""
 
     # Add recipe to db
-    current_recipe = Recipe(recipe_name = recipe_name.title(), source_name = source_name.title(),
+    current_recipe = Recipe(recipe_name = recipe_name.title(), source_name = string.capwords(source_name),
         website = website, directions = directions, image = image, servings = servings)
     db.session.add(current_recipe)
     db.session.commit()

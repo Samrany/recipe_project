@@ -244,8 +244,8 @@
 		"recipe_name": "Grain-Free Apple Cinnamon Breakfast Porridge",
 		"source_name": "Dr. Hyman",
 		"website": "https://drhyman.com/blog/2018/05/24/grain-free-apple-cinnamon-breakfast-porridge/",
-		"directions": "1. Combine all ingredients in blender and blend until smooth. 2. Transfer the mixture to a small saucepan and heat over medium-low, about 3-5 minutes, until the mixture begins to thicken. 3.Top with optional chopped nuts and cinnamon, serve warm, and enjoy!",
-		"image":"https://drhyman.com/wp-content/uploads/2018/05/Apple-Cinnamon-Porridge-Kelsey-Ale-1.jpg",
+		"directions": "1. Combine all ingredients in blender and blend until smooth. <br/> 2. Transfer the mixture to a small saucepan and heat over medium-low, about 3-5 minutes, until the mixture begins to thicken. 3.Top with optional chopped nuts and cinnamon, serve warm, and enjoy!",
+		"image":"https://drhyman.com/wp-content/uploads/2018/05/Apple-Cinnamon-Porridge-Kelsey-Ale-1.jpg", 
 		"servings":"1",
 		"ingredients": [{"ingredient_name":"flax meal", "amount": 2, "metric": "tbsp"}, {
 						"ingredient_name":"coconut milk", "amount": 0.5, "metric": "cup"}, {
@@ -263,7 +263,7 @@
 
 	{
 		"recipe_name": "schug",
-		"source_name": "Alexandra\n's Kitchen",
+		"source_name": "Alexandra's Kitchen",
 		"website": "https://alexandracooks.com/wp-content/uploads/2018/03/skhug.jpg",
 		"directions": "1. In a small skillet, toast the cumin and coriander seeds until they smell fragrant and have turned a shade darker in color. Transfer to a spice grinder or crush with a mortar and pestle. 2. Put the chilies and garlic in a food processor and pulse a few times until they are fairly fine. Add the cilantro, parsley, lemon zest, reserved toasted spiced, 1 tablespoon of lemon juice, 1/2 teaspoon kosher salt, and a few twists of black pepper. Pulse until all is finely chopped into a rough purée. With the motor running, drizzle in the olive oil. Stop the processor before the sauce is completely blended and smooth—you want some texture. Taste the sauce and adjust the seasoning with another 1/2 teaspoon salt (I always do), and pepper and lemon to taste.",
 		"image":"https://alexandracooks.com/wp-content/uploads/2020/06/schug2_alexandraskitchen-500x715.jpg",
