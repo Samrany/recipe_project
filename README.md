@@ -22,8 +22,15 @@ This shopping list is also sent to his/her e-mail.
 
 ![image](https://user-images.githubusercontent.com/64447015/87496688-f0c98c80-c608-11ea-98a2-2a624d933e66.png)
 
+If a user wants to find out more about a recipe card, he/she can click on it to get more information and follow the link to the original blogger's website.
+![image](https://user-images.githubusercontent.com/64447015/87497140-cf1cd500-c609-11ea-9fee-7f3c58ec0e6f.png)
+
+![image](https://user-images.githubusercontent.com/64447015/87497200-f70c3880-c609-11ea-80bd-928dfa5d8d0a.png)
+
+
+
 ### About Me
-This was my first full-stack app but the seeds for my interest in coding were planted long ago. I originally studied business in the hospitality industry at Cornell University where I TA’d Information Systems and thoroughly enjoyed the few cs related classes in my curriculum. I even chose to take VBA as an elective (which I unfortunately forgot soon thereafter).
+This was my first full-stack app but the seeds for my interest in coding were planted long ago. I originally studied business in the hospitality industry at Cornell  where I TA’d Information Systems and thoroughly enjoyed the few cs related classes in my curriculum. I even chose to take VBA as an elective (which I unfortunately forgot soon thereafter).
 
 I started my career as an analyst and progressed in various business-centered roles over the past 10 years. In my last role, I worked cross-collaboratively to solve various business problems and designed, built, and implemented numerous (excel or process related) tools to help the business make more informed decisions and scale. I knew there was further I could take things but didn’t have the technical knowledge, skills, or resources to do so. I had explored the idea of SWE for the last few years and decide to make the jump and join Hackbright’s SWE program when Covid opened up a window of opportunity. I’ve been enjoying the journey since. After all, growing up with an Engineer father, I was programmed to enjoy logic and problem-solving.
 
