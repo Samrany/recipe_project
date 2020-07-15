@@ -3,31 +3,6 @@
 ### What's it all about?
 Fresh&Whole is a curated recipe site, featuring content from health-focused bloggers and chefs. Users can create a profile, search recipes by ingredient, save favorites, and choose how many recipes they want to cook, subsequently generating the corresponding shopping list of ingredients needed which is sent to that user's e-mail.  Users can also follow the link to the originator's website checking out the full-fledge recipe blog post. No longer do you have to put off trying those new recipes because you don’t have the ingredients – get your shopping list and get cooking.
 
-### Features
-
-The homepage allows users to create an account or login, both routes redirect to the homepage with unlocked features once a user is logged in.
-
-![image](https://user-images.githubusercontent.com/64447015/87495941-66345d80-c607-11ea-81d1-13a6a62e976d.png)
-
-![image](https://user-images.githubusercontent.com/64447015/87496188-f1155800-c607-11ea-8e13-24503e58f7b7.png)
-
-Once logged in, a user can search by ingredient, save favorites, and go to their favorites page.
-![image](https://user-images.githubusercontent.com/64447015/87496262-11451700-c608-11ea-942a-1f57ad1275a3.png)
-
-On a user's favorites page, he/she can choose to create a shopping list of ingredients from a certain number of random recipes. (version 2.0 will allow users to choose which recipes to export)
-
-![image](https://user-images.githubusercontent.com/64447015/87496555-a9db9700-c608-11ea-9014-a2527eb8861f.png)
-
-This shopping list is also sent to his/her e-mail.
-
-![image](https://user-images.githubusercontent.com/64447015/87496688-f0c98c80-c608-11ea-98a2-2a624d933e66.png)
-
-If a user wants to find out more about a recipe card, he/she can click on it to get more information and follow the link to the original blogger's website.
-![image](https://user-images.githubusercontent.com/64447015/87497140-cf1cd500-c609-11ea-9fee-7f3c58ec0e6f.png)
-
-![image](https://user-images.githubusercontent.com/64447015/87497200-f70c3880-c609-11ea-80bd-928dfa5d8d0a.png)
-
-
 
 ### About Me
 This was my first full-stack app but the seeds for my interest in coding were planted long ago. I originally studied business in the hospitality industry at Cornell  where I TA’d Information Systems and thoroughly enjoyed the few cs related classes in my curriculum. I even chose to take VBA as an elective (which I unfortunately forgot soon thereafter).
