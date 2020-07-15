@@ -3,6 +3,10 @@
 ### What's it all about?
 Fresh&Whole is a curated recipe site, featuring content from health-focused bloggers and chefs. Users can create a profile, search recipes by ingredient, save favorites, and choose how many recipes they want to cook, subsequently generating the corresponding shopping list of ingredients needed which is sent to that user's e-mail.  Users can also follow the link to the originator's website checking out the full-fledge recipe blog post. No longer do you have to put off trying those new recipes because you don’t have the ingredients – get your shopping list and get cooking.
 
+### Functionality
+
+![image](https://user-images.githubusercontent.com/64447015/87495941-66345d80-c607-11ea-81d1-13a6a62e976d.png)
+
 ### About Me
 This was my first full-stack app but the seeds for my interest in coding were planted long ago. I originally studied business in the hospitality industry at Cornell University where I TA’d Information Systems and thoroughly enjoyed the few cs related classes in my curriculum. I even chose to take VBA as an elective (which I unfortunately forgot soon thereafter).
 
