@@ -24,9 +24,14 @@ Once logged in, a user can search by ingredient, save favorites, and go to their
 Each recipe card features the ingredients front and center for quick browsing:
 
 <img src = "https://user-images.githubusercontent.com/64447015/87886176-b4fb4200-c9cf-11ea-8a82-b52d701466d6.png" width = "200" />
+
 On a user's favorites page, he/she can choose to create a shopping list of ingredients from a certain number of random recipes. (version 2.0 will allow users to choose which recipes to export)
 
 <img src = "https://user-images.githubusercontent.com/64447015/87886284-9184c700-c9d0-11ea-89ea-bb802d68da43.png" width = "500" />
+
+A shopping list of unique ingredients is created using metric conversion in the background via Spoonacular API.
+
+<img src = "https://user-images.githubusercontent.com/64447015/87886391-53d46e00-c9d1-11ea-995c-416f6d8da84a.png" width = "400" />
 
 This shopping list is also sent to his/her e-mail.
 
