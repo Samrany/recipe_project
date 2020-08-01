@@ -19,9 +19,7 @@ def spoonacular_metric_conversion(ingredientName, sourceAmount, sourceUnit, targ
 		response = requests.get(url, params=payload)
 		conversion = response.json()
 		output_amount = conversion['targetAmount']
-		print(response.url)
-		print(conversion)
-		print(output_amount)
+
 		return output_amount
 	
 	except:
@@ -40,43 +38,35 @@ def check_if_same_unit(unit1, unit2):
 
 
 def create_shopping_list(recipes_to_cook):
-	"""Takes in a list of recipe objects and returns a shopping list"""
+	"""Takes in a list of recipe objects and returns a dictionary of shopping list ingredients with amount and metric"""
 
 	shopping_list_dict = {}
-
 
 	recipe_ingredients = [fave_recipe.recipe.recipe_ingredients for fave_recipe in recipes_to_cook]
 
 	#looping over each recipe object and acessing each recipe's recipe_ingredients
 	for fave_recipe in recipes_to_cook:
-		# recipe_ingredients = fave_recipe.recipe.recipe_ingredients
+
 		
 		#looping over list of recipe_ingredients to access the ingredient object related to each
 		for recipe_ingredient in fave_recipe.recipe.recipe_ingredients:
 			ingredient = recipe_ingredient.ingredient
 			
-			#check if ingredient already in shopping list 
 			if ingredient not in shopping_list_dict:
-				#add ingredient to shopping list if not existing
 				shopping_list_dict[ingredient] = {'amount': recipe_ingredient.amount, 'metric': recipe_ingredient.metric}
 
 			else:
 				# evaluate if metrics need conversion then add amounts
-				existing_amount_in_dict= shopping_list_dict[ingredient]['amount'] ##DO I NEED THIS?
+				existing_amount_in_dict= shopping_list_dict[ingredient]['amount'] 
 				existing_metric_in_dict = shopping_list_dict[ingredient]['metric']
 				current_metric_evaluated = recipe_ingredient.metric
 				current_amount_to_add = recipe_ingredient.amount
-
-				print(f"{ingredient} already in list")
-				print(f"amount was: {existing_amount_in_dict}")
-				
+		
 				if check_if_same_unit(existing_metric_in_dict, current_metric_evaluated):
 					shopping_list_dict[ingredient]['amount'] += current_amount_to_add		
 		
-				# Add amounts for ingredient where metric is same
 				
 				else:
-					print(f'amount_to_add:{current_amount_to_add} and current_metric_evaluated is {current_metric_evaluated}')
 					converted_amount_to_add = spoonacular_metric_conversion(ingredient.ingredient_name,
 																	        current_amount_to_add,
 																	        current_metric_evaluated,
@@ -84,10 +74,6 @@ def create_shopping_list(recipes_to_cook):
 																	        )
 
 					shopping_list_dict[ingredient]['amount'] += converted_amount_to_add
-
-				print(f"amount now is: {existing_amount_in_dict}")
-
-
 
 
 	return shopping_list_dict			
